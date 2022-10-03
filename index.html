@@ -4,6 +4,47 @@
      <meta charset="UTF-8">
      <meta http-equiv="X-UA-Compatible" content="IE=edge">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <style>
+          body {
+               background-color: #000;
+               color: #fff;
+          }
+
+          .projects {
+               width: 100%;
+               height: 100vh;
+               display: flex;
+               justify-content: center;
+               align-items: center;
+          }
+
+          .projects .project {
+               width: 100%;
+               height: 100%;
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               flex-direction: column;
+          }
+
+          .projects .project .project-title {
+               font-size: 3rem;
+               font-weight: 700;
+               margin-bottom: 1rem;
+          }
+
+          .projects .project .project-description {
+               font-size: 1.5rem;
+               font-weight: 400;
+               margin-bottom: 1rem;
+          }
+
+          .projects .project .project-link {
+               font-size: 1.5rem;
+               font-weight: 400;
+               margin-bottom: 1rem;
+          }
+     </style>
      <title>All Projects</title>
 </head>
 <body>
@@ -12,16 +53,18 @@
           <h1>All Projects</h1>
           <div class="projects">
                <div class="project">
-                    <h2>Tribute Page</h2>
-                    <a href="/Files/Tribute Page.html">View Project</a>
+                    <h2 class="project-title ">Tribute Page</h2>
+                    <a class="project-link" href="/Files/TributePage/Tribute Page.html">View Project</a>
                </div>
                <div class="project">
-                    <h2>Project 2</h2>
+                    <h2 class="project-title ">Project 2</h2>
                     <p>Project 2 description</p>
+                    <a class="project-link" href="/Files/Project 2.html">View Project</a>
                </div>
                <div class="project">
-                    <h2>Project 3</h2>
+                    <h2 class="project-title ">Project 3</h2>
                     <p>Project 3 description</p>
+                    <a class="project-link" href="/Files/Project 3.html">View Project</a>
                </div>
           </div>
      </div>

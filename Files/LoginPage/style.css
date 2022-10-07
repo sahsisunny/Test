@@ -96,13 +96,15 @@
           width: 90%;
           border-radius: 20px ;
 
+          height: 70%;
      }
-
+     
      .left {
           display: none;
      }
-
+     
      .right {
+          height: 100%;
           width: 100%;
           border-radius:20px;
      }

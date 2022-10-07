@@ -11,7 +11,6 @@
      display: flex;
      justify-content: center;
      align-items: center;
-
 }
 
 .box {
@@ -25,7 +24,6 @@
 
 .left {
      width: 50%;
-     /* height: 100%; */
      display: flex;
      justify-content: center;
      align-items: center;
@@ -36,8 +34,6 @@
 #sunnyImg {
      width: 100%;
      border-radius: 20px 0 0 20px;
-
-
 }
 
 .right {
@@ -47,9 +43,8 @@
      background-image: linear-gradient(rgba(255, 0, 0, 0.511), rgba(255, 255, 0, 0.634));
      justify-content: center;
      align-items: center;
-     padding: 20px;
+     padding: 10px;
      border-radius: 0 20px 20px 0;
-
 }
 
 .text2 {
@@ -62,41 +57,31 @@
      padding: 10px;
      background: transparent;
      margin: 10px 0;
-
      outline: none;
      box-shadow: 1px 1px 5px 0 black;
      border: none;
 }
 
 .btn {
-     /* box-shadow: 1px 1px 5px 0 black; */
      width: 100%;
      border-radius: 10px;
      padding: 10px;
      margin: 10px 0;
-     /* background:  linear-gradient(rgba(255, 0, 0, 0.511), rgba(255, 255, 0, 0.634)); */
      background: transparent;
      cursor: pointer;
-
      outline: none;
      border: none;
      box-shadow: 1px 1px 5px 0 black;
-
 }
 
 .btn:hover {
-     background:  linear-gradient(rgba(255, 200, 0, 0.884), rgba(223, 200, 52, 0.916));
-     /* box-shadow: none; */
+     background: linear-gradient(rgba(255, 200, 0, 0.884), rgba(223, 200, 52, 0.916));
      box-shadow: 1px 1px 5px 0 black;
-
-
 }
 
 .exttext {
      font-size: 0.8rem;
 }
-
-
 
 /* For mobiile */
 @media screen and (max-width: 768px) {
@@ -109,7 +94,6 @@
           flex-direction: column;
           width: 90%;
           border-radius: 20px;
-
           height: 70%;
      }
 

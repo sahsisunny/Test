@@ -1,3 +1,14 @@
+<!-- PHP Code -->
+<?php
+// Include the database configuration file
+require_once 'common/db_connect.php';
+
+// PHP code for login
+
+
+?>
+
+<!-- HTML CODE -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,21 +22,26 @@
 
 <body>
      <div class="container">
+          
           <div class="box">
                <div class="left">
                     <img id="sunnyImg" src="assets/sunny.jpg" alt="xPro Industries">
                </div>
                <div class="right">
                     <p class="text2">Login Here</p>
-                    <form action="login.php" method="POST">
+                    <form action="index.php" method="POST">
                          <input class="ifield" type="text" name="username" placeholder="Username" required><br>
                          <input class="ifield" type="password" name="password" placeholder="Password" required>
                          <input class="btn" type="submit" name="submit" value="Login">
 
                          <!-- Forgot password -->
-                         <p class="exttext">Forgot password? <a href="forget.html">Reset</a></p>
+                         <p class="exttext">Forgot password? <a href="forget.php">Reset</a></p>
                          <!-- Not have an account -->
-                         <p class="exttext">Not have an account? <a href="register.html">Register</a></p>
+                         <p class="exttext">Not have an account? <a href="register.php">Register</a></p>
+
+                         <!-- Got to Home page -->
+                         <input class="btn" onclick="window.open('index.php', '_self')" type="button" value="Back to Home">
+                         
 
                     </form>
                </div>

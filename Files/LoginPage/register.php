@@ -1,3 +1,9 @@
+<?php
+require_once 'common/db_connect.php';
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,15 +23,18 @@
                </div>
                <div class="right">
                     <p class="text2">Register Here</p>
-                    <form action="login.php" method="POST">
+                    <form action="register.php" method="POST">
                          <input class="ifield" type="text" name="name" placeholder="Full Name" required><br>
                          <input class="ifield" type="email" name="email" placeholder="Email" required><br>
-                         <input class="ifield" type="text" name="phone" placeholder="Phone Number" required><br>
+                         <input class="ifield" type="text" name="mobile" placeholder="Phone Number" required><br>
                          <input class="ifield" type="password" name="password" placeholder="Password" required><br>
                          <input class="ifield" type="password" name="cpassword" placeholder="Confirm Password" required><br>
                          <input class="btn" type="submit" name="submit" value="Register">
                          <!-- Have an account -->
-                         <p class="exttext">Already have an account? <a href="index.html">Login</a></p>
+                         <p class="exttext">Already have an account? <a href="login.php">Login</a></p>
+
+                         <!-- Got to Home page -->
+                         <input class="btn" onclick="window.open('index.php', '_self')" type="button" value="Back to Home">
                     </form>
                </div>
           </div>

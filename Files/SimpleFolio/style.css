@@ -516,3 +516,23 @@ footer p {
      font-weight: 500;
      text-shadow: 1px 1px 25px #000000;
 }
+
+/* Smooth Scroll Bar */
+
+::-webkit-scrollbar {
+     width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+     border-radius: 10px;
+     background: linear-gradient(transparent, grey);
+}
+
+::-webkit-scrollbar-thumb:hover {
+     background: linear-gradient(transparent, rgb(0, 153, 255));
+}
+
+
+/* For dark theme media query */
+
+@media (prefers-color-scheme: dark) {}

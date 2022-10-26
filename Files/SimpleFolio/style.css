@@ -27,7 +27,7 @@ nav .logo a {
 
 nav .logo a:hover {
      color: rgb(0, 153, 255);
-     text-shadow: 1px 1px 20px #000000;
+     text-shadow: 1px 1px 20px rgb(0, 153, 255);
 }
 
 nav .links {
@@ -37,7 +37,7 @@ nav .links {
 nav .links li {
      display: inline-block;
      line-height: 80px;
-     margin: 0 20px;
+     margin: 0 10px;
 }
 
 nav .links li a {
@@ -45,8 +45,6 @@ nav .links li a {
      text-decoration: none;
      font-size: 18px;
      font-weight: 500;
-     text-transform: uppercase;
-     letter-spacing: 1px;
 }
 
 nav .links li a:hover {
@@ -135,6 +133,11 @@ nav .links li a:hover {
      height: 150px;
      border-radius: 50%;
      box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+     transition: all 0.25s ease-in-out;
+}
+
+#pulogo:hover {
+     transform: scale(1.1);
 }
 
 .eduright {
@@ -222,6 +225,13 @@ nav .links li a:hover {
 
 }
 
+.certificate-item img:hover {
+
+     box-shadow: 0 8px 6px -6px rgb(0, 153, 255);
+
+
+}
+
 .certificate-info {
      padding: 15px;
 }
@@ -259,6 +269,10 @@ nav .links li a:hover {
      padding: 20px;
      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
      margin: 10px;
+}
+
+.experience-item:hover {
+     box-shadow: 1px 1px 20px rgb(0, 153, 255);
 }
 
 .experience-item h3 {
@@ -313,6 +327,10 @@ h2 {
      margin: 10px;
 }
 
+.project-item:hover {
+     box-shadow: 1px 1px 20px rgb(0, 153, 255);
+}
+
 .left {
      width: 50%;
 }
@@ -321,6 +339,11 @@ h2 {
      width: 100%;
      border-radius: 15px;
      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.left img:hover {
+     transform: rotate(3deg);
+     transition: all 0.3s ease-in-out;
 }
 
 .right {
@@ -429,7 +452,7 @@ h2 {
 
 .stack:hover {
      transform: scale(1.1);
-     transition: all 0.3s ease-in;
+     transition: all 0.3s ease-in-out;
      border-bottom: 3px solid black;
      border-top: 3px solid black;
 }

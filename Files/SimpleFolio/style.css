@@ -9,14 +9,11 @@ body {
 }
 
 /* Navbar */
-nav {
-     height: 80px;
-}
 
 nav .logo {
      font-size: 30px;
      font-weight: 600;
-     padding: 20px;
+     padding: 15px;
      float: left;
 }
 
@@ -30,15 +27,6 @@ nav .logo a:hover {
      text-shadow: 1px 1px 20px rgb(0, 153, 255);
 }
 
-nav .links {
-     float: right;
-}
-
-nav .links li {
-     display: inline-block;
-     line-height: 80px;
-     margin: 0 10px;
-}
 
 nav .links li a {
      color: rgb(0, 153, 255);
@@ -48,10 +36,14 @@ nav .links li a {
 }
 
 nav .links li a:hover {
-     border-bottom: 5px solid rgb(0, 153, 255);
-     transition: all 0.1s ease-in;
+     border-bottom: 3px solid rgb(0, 153, 255);
+     transition: all 0.3s ease-in;
      color: rgb(0, 153, 255);
 }
+.collapse{
+     float: right !important;
+}
+
 
 /* Intro */
 
@@ -536,3 +528,6 @@ footer p {
 /* For dark theme media query */
 
 @media (prefers-color-scheme: dark) {}
+
+
+/* Bootstrap */

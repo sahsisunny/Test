@@ -40,7 +40,8 @@ nav .links li a:hover {
      transition: all 0.3s ease-in;
      color: rgb(0, 153, 255);
 }
-.collapse{
+
+.collapse {
      float: right !important;
 }
 
@@ -530,4 +531,4 @@ footer p {
 @media (prefers-color-scheme: dark) {}
 
 
-/* Bootstrap */
+/* Media Query */

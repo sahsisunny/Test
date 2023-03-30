@@ -1,0 +1,844 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Code coverage report for website-status/.next/server/pages/_app.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../base.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="../../../../favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+    
+<body>
+<div class='wrapper'>
+    <div class='pad1'>
+        <h1><a href="../../../../index.html">All files</a> / <a href="index.html">website-status/.next/server/pages</a> _app.js</h1>
+        <div class='clearfix'>
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">0% </span>
+                <span class="quiet">Statements</span>
+                <span class='fraction'>0/30</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Branches</span>
+                <span class='fraction'>0/0</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">0% </span>
+                <span class="quiet">Functions</span>
+                <span class='fraction'>0/23</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">0% </span>
+                <span class="quiet">Lines</span>
+                <span class='fraction'>0/29</span>
+            </div>
+        
+            
+        </div>
+        <p class="quiet">
+            Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+        </p>
+        <template id="filterTemplate">
+            <div class="quiet">
+                Filter:
+                <input oninput="onInput()" type="search" id="fileSearch">
+            </div>
+        </template>
+    </div>
+    <div class='status-line low'></div>
+    <pre><table class="coverage">
+<tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
+<a name='L2'></a><a href='#L2'>2</a>
+<a name='L3'></a><a href='#L3'>3</a>
+<a name='L4'></a><a href='#L4'>4</a>
+<a name='L5'></a><a href='#L5'>5</a>
+<a name='L6'></a><a href='#L6'>6</a>
+<a name='L7'></a><a href='#L7'>7</a>
+<a name='L8'></a><a href='#L8'>8</a>
+<a name='L9'></a><a href='#L9'>9</a>
+<a name='L10'></a><a href='#L10'>10</a>
+<a name='L11'></a><a href='#L11'>11</a>
+<a name='L12'></a><a href='#L12'>12</a>
+<a name='L13'></a><a href='#L13'>13</a>
+<a name='L14'></a><a href='#L14'>14</a>
+<a name='L15'></a><a href='#L15'>15</a>
+<a name='L16'></a><a href='#L16'>16</a>
+<a name='L17'></a><a href='#L17'>17</a>
+<a name='L18'></a><a href='#L18'>18</a>
+<a name='L19'></a><a href='#L19'>19</a>
+<a name='L20'></a><a href='#L20'>20</a>
+<a name='L21'></a><a href='#L21'>21</a>
+<a name='L22'></a><a href='#L22'>22</a>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a>
+<a name='L36'></a><a href='#L36'>36</a>
+<a name='L37'></a><a href='#L37'>37</a>
+<a name='L38'></a><a href='#L38'>38</a>
+<a name='L39'></a><a href='#L39'>39</a>
+<a name='L40'></a><a href='#L40'>40</a>
+<a name='L41'></a><a href='#L41'>41</a>
+<a name='L42'></a><a href='#L42'>42</a>
+<a name='L43'></a><a href='#L43'>43</a>
+<a name='L44'></a><a href='#L44'>44</a>
+<a name='L45'></a><a href='#L45'>45</a>
+<a name='L46'></a><a href='#L46'>46</a>
+<a name='L47'></a><a href='#L47'>47</a>
+<a name='L48'></a><a href='#L48'>48</a>
+<a name='L49'></a><a href='#L49'>49</a>
+<a name='L50'></a><a href='#L50'>50</a>
+<a name='L51'></a><a href='#L51'>51</a>
+<a name='L52'></a><a href='#L52'>52</a>
+<a name='L53'></a><a href='#L53'>53</a>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a>
+<a name='L56'></a><a href='#L56'>56</a>
+<a name='L57'></a><a href='#L57'>57</a>
+<a name='L58'></a><a href='#L58'>58</a>
+<a name='L59'></a><a href='#L59'>59</a>
+<a name='L60'></a><a href='#L60'>60</a>
+<a name='L61'></a><a href='#L61'>61</a>
+<a name='L62'></a><a href='#L62'>62</a>
+<a name='L63'></a><a href='#L63'>63</a>
+<a name='L64'></a><a href='#L64'>64</a>
+<a name='L65'></a><a href='#L65'>65</a>
+<a name='L66'></a><a href='#L66'>66</a>
+<a name='L67'></a><a href='#L67'>67</a>
+<a name='L68'></a><a href='#L68'>68</a>
+<a name='L69'></a><a href='#L69'>69</a>
+<a name='L70'></a><a href='#L70'>70</a>
+<a name='L71'></a><a href='#L71'>71</a>
+<a name='L72'></a><a href='#L72'>72</a>
+<a name='L73'></a><a href='#L73'>73</a>
+<a name='L74'></a><a href='#L74'>74</a>
+<a name='L75'></a><a href='#L75'>75</a>
+<a name='L76'></a><a href='#L76'>76</a>
+<a name='L77'></a><a href='#L77'>77</a>
+<a name='L78'></a><a href='#L78'>78</a>
+<a name='L79'></a><a href='#L79'>79</a>
+<a name='L80'></a><a href='#L80'>80</a>
+<a name='L81'></a><a href='#L81'>81</a>
+<a name='L82'></a><a href='#L82'>82</a>
+<a name='L83'></a><a href='#L83'>83</a>
+<a name='L84'></a><a href='#L84'>84</a>
+<a name='L85'></a><a href='#L85'>85</a>
+<a name='L86'></a><a href='#L86'>86</a>
+<a name='L87'></a><a href='#L87'>87</a>
+<a name='L88'></a><a href='#L88'>88</a>
+<a name='L89'></a><a href='#L89'>89</a>
+<a name='L90'></a><a href='#L90'>90</a>
+<a name='L91'></a><a href='#L91'>91</a>
+<a name='L92'></a><a href='#L92'>92</a>
+<a name='L93'></a><a href='#L93'>93</a>
+<a name='L94'></a><a href='#L94'>94</a>
+<a name='L95'></a><a href='#L95'>95</a>
+<a name='L96'></a><a href='#L96'>96</a>
+<a name='L97'></a><a href='#L97'>97</a>
+<a name='L98'></a><a href='#L98'>98</a>
+<a name='L99'></a><a href='#L99'>99</a>
+<a name='L100'></a><a href='#L100'>100</a>
+<a name='L101'></a><a href='#L101'>101</a>
+<a name='L102'></a><a href='#L102'>102</a>
+<a name='L103'></a><a href='#L103'>103</a>
+<a name='L104'></a><a href='#L104'>104</a>
+<a name='L105'></a><a href='#L105'>105</a>
+<a name='L106'></a><a href='#L106'>106</a>
+<a name='L107'></a><a href='#L107'>107</a>
+<a name='L108'></a><a href='#L108'>108</a>
+<a name='L109'></a><a href='#L109'>109</a>
+<a name='L110'></a><a href='#L110'>110</a>
+<a name='L111'></a><a href='#L111'>111</a>
+<a name='L112'></a><a href='#L112'>112</a>
+<a name='L113'></a><a href='#L113'>113</a>
+<a name='L114'></a><a href='#L114'>114</a>
+<a name='L115'></a><a href='#L115'>115</a>
+<a name='L116'></a><a href='#L116'>116</a>
+<a name='L117'></a><a href='#L117'>117</a>
+<a name='L118'></a><a href='#L118'>118</a>
+<a name='L119'></a><a href='#L119'>119</a>
+<a name='L120'></a><a href='#L120'>120</a>
+<a name='L121'></a><a href='#L121'>121</a>
+<a name='L122'></a><a href='#L122'>122</a>
+<a name='L123'></a><a href='#L123'>123</a>
+<a name='L124'></a><a href='#L124'>124</a>
+<a name='L125'></a><a href='#L125'>125</a>
+<a name='L126'></a><a href='#L126'>126</a>
+<a name='L127'></a><a href='#L127'>127</a>
+<a name='L128'></a><a href='#L128'>128</a>
+<a name='L129'></a><a href='#L129'>129</a>
+<a name='L130'></a><a href='#L130'>130</a>
+<a name='L131'></a><a href='#L131'>131</a>
+<a name='L132'></a><a href='#L132'>132</a>
+<a name='L133'></a><a href='#L133'>133</a>
+<a name='L134'></a><a href='#L134'>134</a>
+<a name='L135'></a><a href='#L135'>135</a>
+<a name='L136'></a><a href='#L136'>136</a>
+<a name='L137'></a><a href='#L137'>137</a>
+<a name='L138'></a><a href='#L138'>138</a>
+<a name='L139'></a><a href='#L139'>139</a>
+<a name='L140'></a><a href='#L140'>140</a>
+<a name='L141'></a><a href='#L141'>141</a>
+<a name='L142'></a><a href='#L142'>142</a>
+<a name='L143'></a><a href='#L143'>143</a>
+<a name='L144'></a><a href='#L144'>144</a>
+<a name='L145'></a><a href='#L145'>145</a>
+<a name='L146'></a><a href='#L146'>146</a>
+<a name='L147'></a><a href='#L147'>147</a>
+<a name='L148'></a><a href='#L148'>148</a>
+<a name='L149'></a><a href='#L149'>149</a>
+<a name='L150'></a><a href='#L150'>150</a>
+<a name='L151'></a><a href='#L151'>151</a>
+<a name='L152'></a><a href='#L152'>152</a>
+<a name='L153'></a><a href='#L153'>153</a>
+<a name='L154'></a><a href='#L154'>154</a>
+<a name='L155'></a><a href='#L155'>155</a>
+<a name='L156'></a><a href='#L156'>156</a>
+<a name='L157'></a><a href='#L157'>157</a>
+<a name='L158'></a><a href='#L158'>158</a>
+<a name='L159'></a><a href='#L159'>159</a>
+<a name='L160'></a><a href='#L160'>160</a>
+<a name='L161'></a><a href='#L161'>161</a>
+<a name='L162'></a><a href='#L162'>162</a>
+<a name='L163'></a><a href='#L163'>163</a>
+<a name='L164'></a><a href='#L164'>164</a>
+<a name='L165'></a><a href='#L165'>165</a>
+<a name='L166'></a><a href='#L166'>166</a>
+<a name='L167'></a><a href='#L167'>167</a>
+<a name='L168'></a><a href='#L168'>168</a>
+<a name='L169'></a><a href='#L169'>169</a>
+<a name='L170'></a><a href='#L170'>170</a>
+<a name='L171'></a><a href='#L171'>171</a>
+<a name='L172'></a><a href='#L172'>172</a>
+<a name='L173'></a><a href='#L173'>173</a>
+<a name='L174'></a><a href='#L174'>174</a>
+<a name='L175'></a><a href='#L175'>175</a>
+<a name='L176'></a><a href='#L176'>176</a>
+<a name='L177'></a><a href='#L177'>177</a>
+<a name='L178'></a><a href='#L178'>178</a>
+<a name='L179'></a><a href='#L179'>179</a>
+<a name='L180'></a><a href='#L180'>180</a>
+<a name='L181'></a><a href='#L181'>181</a>
+<a name='L182'></a><a href='#L182'>182</a>
+<a name='L183'></a><a href='#L183'>183</a>
+<a name='L184'></a><a href='#L184'>184</a>
+<a name='L185'></a><a href='#L185'>185</a>
+<a name='L186'></a><a href='#L186'>186</a>
+<a name='L187'></a><a href='#L187'>187</a>
+<a name='L188'></a><a href='#L188'>188</a>
+<a name='L189'></a><a href='#L189'>189</a>
+<a name='L190'></a><a href='#L190'>190</a>
+<a name='L191'></a><a href='#L191'>191</a>
+<a name='L192'></a><a href='#L192'>192</a>
+<a name='L193'></a><a href='#L193'>193</a>
+<a name='L194'></a><a href='#L194'>194</a>
+<a name='L195'></a><a href='#L195'>195</a>
+<a name='L196'></a><a href='#L196'>196</a>
+<a name='L197'></a><a href='#L197'>197</a>
+<a name='L198'></a><a href='#L198'>198</a>
+<a name='L199'></a><a href='#L199'>199</a>
+<a name='L200'></a><a href='#L200'>200</a>
+<a name='L201'></a><a href='#L201'>201</a>
+<a name='L202'></a><a href='#L202'>202</a>
+<a name='L203'></a><a href='#L203'>203</a>
+<a name='L204'></a><a href='#L204'>204</a>
+<a name='L205'></a><a href='#L205'>205</a>
+<a name='L206'></a><a href='#L206'>206</a>
+<a name='L207'></a><a href='#L207'>207</a>
+<a name='L208'></a><a href='#L208'>208</a>
+<a name='L209'></a><a href='#L209'>209</a>
+<a name='L210'></a><a href='#L210'>210</a>
+<a name='L211'></a><a href='#L211'>211</a>
+<a name='L212'></a><a href='#L212'>212</a>
+<a name='L213'></a><a href='#L213'>213</a>
+<a name='L214'></a><a href='#L214'>214</a>
+<a name='L215'></a><a href='#L215'>215</a>
+<a name='L216'></a><a href='#L216'>216</a>
+<a name='L217'></a><a href='#L217'>217</a>
+<a name='L218'></a><a href='#L218'>218</a>
+<a name='L219'></a><a href='#L219'>219</a>
+<a name='L220'></a><a href='#L220'>220</a>
+<a name='L221'></a><a href='#L221'>221</a>
+<a name='L222'></a><a href='#L222'>222</a>
+<a name='L223'></a><a href='#L223'>223</a>
+<a name='L224'></a><a href='#L224'>224</a>
+<a name='L225'></a><a href='#L225'>225</a>
+<a name='L226'></a><a href='#L226'>226</a>
+<a name='L227'></a><a href='#L227'>227</a>
+<a name='L228'></a><a href='#L228'>228</a>
+<a name='L229'></a><a href='#L229'>229</a>
+<a name='L230'></a><a href='#L230'>230</a>
+<a name='L231'></a><a href='#L231'>231</a>
+<a name='L232'></a><a href='#L232'>232</a>
+<a name='L233'></a><a href='#L233'>233</a>
+<a name='L234'></a><a href='#L234'>234</a>
+<a name='L235'></a><a href='#L235'>235</a>
+<a name='L236'></a><a href='#L236'>236</a>
+<a name='L237'></a><a href='#L237'>237</a>
+<a name='L238'></a><a href='#L238'>238</a>
+<a name='L239'></a><a href='#L239'>239</a>
+<a name='L240'></a><a href='#L240'>240</a>
+<a name='L241'></a><a href='#L241'>241</a>
+<a name='L242'></a><a href='#L242'>242</a>
+<a name='L243'></a><a href='#L243'>243</a>
+<a name='L244'></a><a href='#L244'>244</a>
+<a name='L245'></a><a href='#L245'>245</a>
+<a name='L246'></a><a href='#L246'>246</a>
+<a name='L247'></a><a href='#L247'>247</a>
+<a name='L248'></a><a href='#L248'>248</a>
+<a name='L249'></a><a href='#L249'>249</a>
+<a name='L250'></a><a href='#L250'>250</a>
+<a name='L251'></a><a href='#L251'>251</a>
+<a name='L252'></a><a href='#L252'>252</a>
+<a name='L253'></a><a href='#L253'>253</a>
+<a name='L254'></a><a href='#L254'>254</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/*
+ * ATTENTION: An "eval-source-map" devtool has been used.
+ * This devtool is neither made for production nor for readable output files.
+ * It uses "eval()" calls to create a separate source file with attached SourceMaps in the browser devtools.
+ * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
+ * or disable the default devtool with "devtool: false".
+ * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
+ */
+<span class="cstat-no" title="statement not covered" >(<span class="fstat-no" title="function not covered" >()</span> =&gt; {</span>
+var exports = <span class="cstat-no" title="statement not covered" >{};</span>
+<span class="cstat-no" title="statement not covered" >exports.id = "pages/_app";</span>
+<span class="cstat-no" title="statement not covered" >exports.ids = ["pages/_app"];</span>
+<span class="cstat-no" title="statement not covered" >exports.modules = {</span>
+&nbsp;
+/***/ "./slices/apiSlice.ts":
+/*!****************************!*\
+  !*** ./slices/apiSlice.ts ***!
+  \****************************/
+/***/ (<span class="fstat-no" title="function not covered" >(_</span>_unused_webpack_module, __webpack_exports__, __webpack_require__) =&gt; {
+&nbsp;
+"use strict";
+<span class="cstat-no" title="statement not covered" >eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"statusApi\": () =&gt; (/* binding */ statusApi),\n/* harmony export */   \"useGetAllStatusQuery\": () =&gt; (/* binding */ useGetAllStatusQuery),\n/* harmony export */   \"useGetIdleStatusQuery\": () =&gt; (/* binding */ useGetIdleStatusQuery)\n/* harmony export */ });\n/* harmony import */ var _components_constants_url__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @/components/constants/url */ \"./src/components/constants/url.ts\");\n/* harmony import */ var _reduxjs_toolkit_query_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @reduxjs/toolkit/query/react */ \"@reduxjs/toolkit/query/react\");\n/* harmony import */ var _reduxjs_toolkit_query_react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_reduxjs_toolkit_query_react__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var next_redux_wrapper__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next-redux-wrapper */ \"next-redux-wrapper\");\n/* harmony import */ var next_redux_wrapper__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_redux_wrapper__WEBPACK_IMPORTED_MODULE_2__);\n\n\n\nconst statusApi = (0,_reduxjs_toolkit_query_react__WEBPACK_IMPORTED_MODULE_1__.createApi)({\n    reducerPath: \"statusApi\",\n    baseQuery: (0,_reduxjs_toolkit_query_react__WEBPACK_IMPORTED_MODULE_1__.fetchBaseQuery)({\n        baseUrl: _components_constants_url__WEBPACK_IMPORTED_MODULE_0__.BASE_URL\n    }),\n    extractRehydrationInfo (action, { reducerPath  }) {\n        if (action.type === next_redux_wrapper__WEBPACK_IMPORTED_MODULE_2__.HYDRATE) {\n            return action.payload[reducerPath];\n        }\n    },\n    endpoints: (builder)=&gt;({\n            getAllStatus: builder.query({\n                query: ()=&gt;\"users/status\"\n            }),\n            getIdleStatus: builder.query({\n                query: (state)=&gt;`users/status?state=${state}`\n            })\n        })\n});\nconst { useGetAllStatusQuery , useGetIdleStatusQuery  } = statusApi;\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zbGljZXMvYXBpU2xpY2UudHMuanMiLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7QUFBc0Q7QUFDbUI7QUFDNUI7QUFFdEMsTUFBTUksWUFBWUgsdUVBQVNBLENBQUM7SUFDakNJLGFBQWE7SUFDYkMsV0FBV0osNEVBQWNBLENBQUM7UUFBRUssU0FBU1AsK0RBQVFBO0lBQUM7SUFDOUNRLHdCQUF1QkMsTUFBTSxFQUFFLEVBQUVKLFlBQVcsRUFBRSxFQUFFO1FBQzlDLElBQUlJLE9BQU9DLElBQUksS0FBS1AsdURBQU9BLEVBQUU7WUFDM0IsT0FBT00sT0FBT0UsT0FBTyxDQUFDTixZQUFZO1FBQ3BDLENBQUM7SUFDSDtJQUNBTyxXQUFXLENBQUNDLFVBQWE7WUFDdkJDLGNBQWNELFFBQVFFLEtBQUssQ0FBQztnQkFDMUJBLE9BQU8sSUFBTTtZQUNmO1lBQ0FDLGVBQWVILFFBQVFFLEtBQUssQ0FBQztnQkFDM0JBLE9BQU8sQ0FBQ0UsUUFBVSxDQUFDLG1CQUFtQixFQUFFQSxNQUFNLENBQUM7WUFDakQ7UUFDRjtBQUNGLEdBQUc7QUFFSSxNQUFNLEVBQUVDLHFCQUFvQixFQUFFQyxzQkFBcUIsRUFBRSxHQUFHZixVQUFVIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vc3RhdHVzLy4vc2xpY2VzL2FwaVNsaWNlLnRzPzhjOGMiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgQkFTRV9VUkwgfSBmcm9tICdAL2NvbXBvbmVudHMvY29uc3RhbnRzL3VybCc7XHJcbmltcG9ydCB7IGNyZWF0ZUFwaSwgZmV0Y2hCYXNlUXVlcnkgfSBmcm9tICdAcmVkdXhqcy90b29sa2l0L3F1ZXJ5L3JlYWN0JztcclxuaW1wb3J0IHsgSFlEUkFURSB9IGZyb20gJ25leHQtcmVkdXgtd3JhcHBlcic7XHJcblxyXG5leHBvcnQgY29uc3Qgc3RhdHVzQXBpID0gY3JlYXRlQXBpKHtcclxuICByZWR1Y2VyUGF0aDogJ3N0YXR1c0FwaScsXHJcbiAgYmFzZVF1ZXJ5OiBmZXRjaEJhc2VRdWVyeSh7IGJhc2VVcmw6IEJBU0VfVVJMIH0pLFxyXG4gIGV4dHJhY3RSZWh5ZHJhdGlvbkluZm8oYWN0aW9uLCB7IHJlZHVjZXJQYXRoIH0pIHtcclxuICAgIGlmIChhY3Rpb24udHlwZSA9PT0gSFlEUkFURSkge1xyXG4gICAgICByZXR1cm4gYWN0aW9uLnBheWxvYWRbcmVkdWNlclBhdGhdO1xyXG4gICAgfVxyXG4gIH0sXHJcbiAgZW5kcG9pbnRzOiAoYnVpbGRlcikgPT4gKHtcclxuICAgIGdldEFsbFN0YXR1czogYnVpbGRlci5xdWVyeSh7XHJcbiAgICAgIHF1ZXJ5OiAoKSA9PiAndXNlcnMvc3RhdHVzJyxcclxuICAgIH0pLFxyXG4gICAgZ2V0SWRsZVN0YXR1czogYnVpbGRlci5xdWVyeSh7XHJcbiAgICAgIHF1ZXJ5OiAoc3RhdGUpID0+IGB1c2Vycy9zdGF0dXM/c3RhdGU9JHtzdGF0ZX1gLFxyXG4gICAgfSksXHJcbiAgfSksXHJcbn0pO1xyXG5cclxuZXhwb3J0IGNvbnN0IHsgdXNlR2V0QWxsU3RhdHVzUXVlcnksIHVzZUdldElkbGVTdGF0dXNRdWVyeSB9ID0gc3RhdHVzQXBpO1xyXG4iXSwibmFtZXMiOlsiQkFTRV9VUkwiLCJjcmVhdGVBcGkiLCJmZXRjaEJhc2VRdWVyeSIsIkhZRFJBVEUiLCJzdGF0dXNBcGkiLCJyZWR1Y2VyUGF0aCIsImJhc2VRdWVyeSIsImJhc2VVcmwiLCJleHRyYWN0UmVoeWRyYXRpb25JbmZvIiwiYWN0aW9uIiwidHlwZSIsInBheWxvYWQiLCJlbmRwb2ludHMiLCJidWlsZGVyIiwiZ2V0QWxsU3RhdHVzIiwicXVlcnkiLCJnZXRJZGxlU3RhdHVzIiwic3RhdGUiLCJ1c2VHZXRBbGxTdGF0dXNRdWVyeSIsInVzZUdldElkbGVTdGF0dXNRdWVyeSJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./slices/apiSlice.ts\n");</span>
+&nbsp;
+/***/ }),
+&nbsp;
+/***/ "./src/components/constants/url.ts":
+/*!*****************************************!*\
+  !*** ./src/components/constants/url.ts ***!
+  \*****************************************/
+/***/ (<span class="fstat-no" title="function not covered" >(_</span>_unused_webpack_module, __webpack_exports__, __webpack_require__) =&gt; {
+&nbsp;
+"use strict";
+<span class="cstat-no" title="statement not covered" >eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"ALL_LEVELS_URL\": () =&gt; (/* binding */ ALL_LEVELS_URL),\n/* harmony export */   \"ALL_TAGS_URL\": () =&gt; (/* binding */ ALL_TAGS_URL),\n/* harmony export */   \"BASE_URL\": () =&gt; (/* binding */ BASE_URL),\n/* harmony export */   \"CHALLENGES_URL\": () =&gt; (/* binding */ CHALLENGES_URL),\n/* harmony export */   \"CRYPTO_URL\": () =&gt; (/* binding */ CRYPTO_URL),\n/* harmony export */   \"DEFAULT_AVATAR\": () =&gt; (/* binding */ DEFAULT_AVATAR),\n/* harmony export */   \"EVENTS_URL\": () =&gt; (/* binding */ EVENTS_URL),\n/* harmony export */   \"GITHUB_LOGO\": () =&gt; (/* binding */ GITHUB_LOGO),\n/* harmony export */   \"HOME_URL\": () =&gt; (/* binding */ HOME_URL),\n/* harmony export */   \"IDLE_USERS_URL\": () =&gt; (/* binding */ IDLE_USERS_URL),\n/* harmony export */   \"ITEMS_URL\": () =&gt; (/* binding */ ITEMS_URL),\n/* harmony export */   \"ITEM_BY_FILTER_URL\": () =&gt; (/* binding */ ITEM_BY_FILTER_URL),\n/* harmony export */   \"ITEM_TYPES\": () =&gt; (/* binding */ ITEM_TYPES),\n/* harmony export */   \"LOGIN_URL\": () =&gt; (/* binding */ LOGIN_URL),\n/* harmony export */   \"LOGOUT_URL\": () =&gt; (/* binding */ LOGOUT_URL),\n/* harmony export */   \"MEMBERS_URL\": () =&gt; (/* binding */ MEMBERS_URL),\n/* harmony export */   \"MINE_TASKS_URL\": () =&gt; (/* binding */ MINE_TASKS_URL),\n/* harmony export */   \"RDS_LOGO\": () =&gt; (/* binding */ RDS_LOGO),\n/* harmony export */   \"SIGNUP_LINK\": () =&gt; (/* binding */ SIGNUP_LINK),\n/* harmony export */   \"STATUS_URL\": () =&gt; (/* binding */ STATUS_URL),\n/* harmony export */   \"SUBSCRIBE_TO_CHALLENGE_URL\": () =&gt; (/* binding */ SUBSCRIBE_TO_CHALLENGE_URL),\n/* harmony export */   \"TASKS_URL\": () =&gt; (/* binding */ TASKS_URL),\n/* harmony export */   \"USER_PROFILE_URL\": () =&gt; (/* binding */ USER_PROFILE_URL),\n/* harmony export */   \"USER_SELF\": () =&gt; (/* binding */ USER_SELF),\n/* harmony export */   \"WELCOME_URL\": () =&gt; (/* binding */ WELCOME_URL)\n/* harmony export */ });\nconst BASE_URL = `${\"https://api.realdevsquad.com\"}`;\nconst SUBSCRIBE_TO_CHALLENGE_URL = `${BASE_URL}/challenges/subscribe`;\nconst MINE_TASKS_URL = `${\"https://api.realdevsquad.com\"}/tasks/self`;\nconst USER_PROFILE_URL = \"https://my.realdevsquad.com/profile\";\nconst HOME_URL = \"https://realdevsquad.com\";\nconst WELCOME_URL = \"https://welcome.realdevsquad.com\";\nconst EVENTS_URL = \"https://www.realdevsquad.com/events.html\";\nconst CRYPTO_URL = \"https://crypto.realdevsquad.com\";\nconst STATUS_URL = \"https://status.realdevsquad.com\";\nconst LOGIN_URL = `https://github.com/login/oauth/authorize?client_id=23c78f66ab7964e5ef97&amp;state=${STATUS_URL}`;\nconst MEMBERS_URL = \"https://members.realdevsquad.com\";\nconst CHALLENGES_URL = `${BASE_URL}/challenges`;\nconst USER_SELF = `${BASE_URL}/users/self`;\nconst DEFAULT_AVATAR = \"/Avatar.png\";\nconst RDS_LOGO = \"/RDSLogo.png\";\nconst GITHUB_LOGO = \"/github-white.png\";\nconst SIGNUP_LINK = \"https://my.realdevsquad.com/signup\";\nconst LOGOUT_URL = `${\"https://api.realdevsquad.com\"}/auth/signout`;\nconst IDLE_USERS_URL = `${\"https://api.realdevsquad.com\"}/users/status?state=IDLE`;\nconst ITEM_BY_FILTER_URL = `${\"https://api.realdevsquad.com\"}/items/filter`;\nconst ITEMS_URL = `${\"https://api.realdevsquad.com\"}/items`;\nconst ALL_TAGS_URL = `${\"https://api.realdevsquad.com\"}/tags`;\nconst ALL_LEVELS_URL = `${\"https://api.realdevsquad.com\"}/levels`;\nconst ITEM_TYPES = {\n    task: \"TASK\"\n};\nconst TASKS_URL = `${\"https://api.realdevsquad.com\"}/tasks`;\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMvY29tcG9uZW50cy9jb25zdGFudHMvdXJsLnRzLmpzIiwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFBTyxNQUFNQSxXQUFXLENBQUMsRUFBRUMsOEJBQWdDLENBQUMsQ0FBQyxDQUFDO0FBQ3ZELE1BQU1HLDZCQUE2QixDQUFDLEVBQUVKLFNBQVMscUJBQXFCLENBQUMsQ0FBQztBQUN0RSxNQUFNSyxpQkFBaUIsQ0FBQyxFQUFFSiw4QkFBZ0MsQ0FBQyxXQUFXLENBQUMsQ0FBQztBQUN4RSxNQUFNSyxtQkFBbUIsc0NBQXNDO0FBQy9ELE1BQU1DLFdBQVcsMkJBQTJCO0FBQzVDLE1BQU1DLGNBQWMsbUNBQW1DO0FBQ3ZELE1BQU1DLGFBQWEsMkNBQTJDO0FBQzlELE1BQU1DLGFBQWEsa0NBQWtDO0FBQ3JELE1BQU1DLGFBQWEsa0NBQWtDO0FBQ3JELE1BQU1DLFlBQVksQ0FBQyw4RUFBOEUsRUFBRUQsV0FBVyxDQUFDLENBQUM7QUFDaEgsTUFBTUUsY0FBYyxtQ0FBbUM7QUFDdkQsTUFBTUMsaUJBQWlCLENBQUMsRUFBRWQsU0FBUyxXQUFXLENBQUMsQ0FBQztBQUNoRCxNQUFNZSxZQUFZLENBQUMsRUFBRWYsU0FBUyxXQUFXLENBQUMsQ0FBQztBQUMzQyxNQUFNZ0IsaUJBQWlCLGNBQWM7QUFDckMsTUFBTUMsV0FBVyxlQUFlO0FBQ2hDLE1BQU1DLGNBQWMsb0JBQW9CO0FBQ3hDLE1BQU1DLGNBQWMscUNBQXFDO0FBQ3pELE1BQU1DLGFBQWEsQ0FBQyxFQUFFbkIsOEJBQWdDLENBQUMsYUFBYSxDQUFDLENBQUM7QUFDdEUsTUFBTW9CLGlCQUFpQixDQUFDLEVBQUVwQiw4QkFBZ0MsQ0FBQyx3QkFBd0IsQ0FBQyxDQUFDO0FBQ3JGLE1BQU1xQixxQkFBcUIsQ0FBQyxFQUFFckIsOEJBQWdDLENBQUMsYUFBYSxDQUFDLENBQUM7QUFDOUUsTUFBTXNCLFlBQVksQ0FBQyxFQUFFdEIsOEJBQWdDLENBQUMsTUFBTSxDQUFDLENBQUM7QUFDOUQsTUFBTXVCLGVBQWUsQ0FBQyxFQUFFdkIsOEJBQWdDLENBQUMsS0FBSyxDQUFDLENBQUM7QUFDaEUsTUFBTXdCLGlCQUFpQixDQUFDLEVBQUV4Qiw4QkFBZ0MsQ0FBQyxPQUFPLENBQUMsQ0FBQztBQUNwRSxNQUFNeUIsYUFBYTtJQUFFQyxNQUFNO0FBQU8sRUFBRTtBQUNwQyxNQUFNQyxZQUFZLENBQUMsRUFBRTNCLDhCQUFnQyxDQUFDLE1BQU0sQ0FBQyxDQUFDIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vc3RhdHVzLy4vc3JjL2NvbXBvbmVudHMvY29uc3RhbnRzL3VybC50cz8zOGNjIl0sInNvdXJjZXNDb250ZW50IjpbImV4cG9ydCBjb25zdCBCQVNFX1VSTCA9IGAke3Byb2Nlc3MuZW52Lk5FWFRfUFVCTElDX0JBU0VfVVJMfWA7XHJcbmV4cG9ydCBjb25zdCBTVUJTQ1JJQkVfVE9fQ0hBTExFTkdFX1VSTCA9IGAke0JBU0VfVVJMfS9jaGFsbGVuZ2VzL3N1YnNjcmliZWA7XHJcbmV4cG9ydCBjb25zdCBNSU5FX1RBU0tTX1VSTCA9IGAke3Byb2Nlc3MuZW52Lk5FWFRfUFVCTElDX0JBU0VfVVJMfS90YXNrcy9zZWxmYDtcclxuZXhwb3J0IGNvbnN0IFVTRVJfUFJPRklMRV9VUkwgPSAnaHR0cHM6Ly9teS5yZWFsZGV2c3F1YWQuY29tL3Byb2ZpbGUnO1xyXG5leHBvcnQgY29uc3QgSE9NRV9VUkwgPSAnaHR0cHM6Ly9yZWFsZGV2c3F1YWQuY29tJztcclxuZXhwb3J0IGNvbnN0IFdFTENPTUVfVVJMID0gJ2h0dHBzOi8vd2VsY29tZS5yZWFsZGV2c3F1YWQuY29tJztcclxuZXhwb3J0IGNvbnN0IEVWRU5UU19VUkwgPSAnaHR0cHM6Ly93d3cucmVhbGRldnNxdWFkLmNvbS9ldmVudHMuaHRtbCc7XHJcbmV4cG9ydCBjb25zdCBDUllQVE9fVVJMID0gJ2h0dHBzOi8vY3J5cHRvLnJlYWxkZXZzcXVhZC5jb20nO1xyXG5leHBvcnQgY29uc3QgU1RBVFVTX1VSTCA9ICdodHRwczovL3N0YXR1cy5yZWFsZGV2c3F1YWQuY29tJztcclxuZXhwb3J0IGNvbnN0IExPR0lOX1VSTCA9IGBodHRwczovL2dpdGh1Yi5jb20vbG9naW4vb2F1dGgvYXV0aG9yaXplP2NsaWVudF9pZD0yM2M3OGY2NmFiNzk2NGU1ZWY5NyZzdGF0ZT0ke1NUQVRVU19VUkx9YDtcclxuZXhwb3J0IGNvbnN0IE1FTUJFUlNfVVJMID0gJ2h0dHBzOi8vbWVtYmVycy5yZWFsZGV2c3F1YWQuY29tJztcclxuZXhwb3J0IGNvbnN0IENIQUxMRU5HRVNfVVJMID0gYCR7QkFTRV9VUkx9L2NoYWxsZW5nZXNgO1xyXG5leHBvcnQgY29uc3QgVVNFUl9TRUxGID0gYCR7QkFTRV9VUkx9L3VzZXJzL3NlbGZgO1xyXG5leHBvcnQgY29uc3QgREVGQVVMVF9BVkFUQVIgPSAnL0F2YXRhci5wbmcnO1xyXG5leHBvcnQgY29uc3QgUkRTX0xPR08gPSAnL1JEU0xvZ28ucG5nJztcclxuZXhwb3J0IGNvbnN0IEdJVEhVQl9MT0dPID0gJy9naXRodWItd2hpdGUucG5nJztcclxuZXhwb3J0IGNvbnN0IFNJR05VUF9MSU5LID0gJ2h0dHBzOi8vbXkucmVhbGRldnNxdWFkLmNvbS9zaWdudXAnO1xyXG5leHBvcnQgY29uc3QgTE9HT1VUX1VSTCA9IGAke3Byb2Nlc3MuZW52Lk5FWFRfUFVCTElDX0JBU0VfVVJMfS9hdXRoL3NpZ25vdXRgO1xyXG5leHBvcnQgY29uc3QgSURMRV9VU0VSU19VUkwgPSBgJHtwcm9jZXNzLmVudi5ORVhUX1BVQkxJQ19CQVNFX1VSTH0vdXNlcnMvc3RhdHVzP3N0YXRlPUlETEVgO1xyXG5leHBvcnQgY29uc3QgSVRFTV9CWV9GSUxURVJfVVJMID0gYCR7cHJvY2Vzcy5lbnYuTkVYVF9QVUJMSUNfQkFTRV9VUkx9L2l0ZW1zL2ZpbHRlcmA7XHJcbmV4cG9ydCBjb25zdCBJVEVNU19VUkwgPSBgJHtwcm9jZXNzLmVudi5ORVhUX1BVQkxJQ19CQVNFX1VSTH0vaXRlbXNgO1xyXG5leHBvcnQgY29uc3QgQUxMX1RBR1NfVVJMID0gYCR7cHJvY2Vzcy5lbnYuTkVYVF9QVUJMSUNfQkFTRV9VUkx9L3RhZ3NgO1xyXG5leHBvcnQgY29uc3QgQUxMX0xFVkVMU19VUkwgPSBgJHtwcm9jZXNzLmVudi5ORVhUX1BVQkxJQ19CQVNFX1VSTH0vbGV2ZWxzYDtcclxuZXhwb3J0IGNvbnN0IElURU1fVFlQRVMgPSB7IHRhc2s6ICdUQVNLJyB9O1xyXG5leHBvcnQgY29uc3QgVEFTS1NfVVJMID0gYCR7cHJvY2Vzcy5lbnYuTkVYVF9QVUJMSUNfQkFTRV9VUkx9L3Rhc2tzYDtcclxuIl0sIm5hbWVzIjpbIkJBU0VfVVJMIiwicHJvY2VzcyIsImVudiIsIk5FWFRfUFVCTElDX0JBU0VfVVJMIiwiU1VCU0NSSUJFX1RPX0NIQUxMRU5HRV9VUkwiLCJNSU5FX1RBU0tTX1VSTCIsIlVTRVJfUFJPRklMRV9VUkwiLCJIT01FX1VSTCIsIldFTENPTUVfVVJMIiwiRVZFTlRTX1VSTCIsIkNSWVBUT19VUkwiLCJTVEFUVVNfVVJMIiwiTE9HSU5fVVJMIiwiTUVNQkVSU19VUkwiLCJDSEFMTEVOR0VTX1VSTCIsIlVTRVJfU0VMRiIsIkRFRkFVTFRfQVZBVEFSIiwiUkRTX0xPR08iLCJHSVRIVUJfTE9HTyIsIlNJR05VUF9MSU5LIiwiTE9HT1VUX1VSTCIsIklETEVfVVNFUlNfVVJMIiwiSVRFTV9CWV9GSUxURVJfVVJMIiwiSVRFTVNfVVJMIiwiQUxMX1RBR1NfVVJMIiwiQUxMX0xFVkVMU19VUkwiLCJJVEVNX1RZUEVTIiwidGFzayIsIlRBU0tTX1VSTCJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./src/components/constants/url.ts\n");</span>
+&nbsp;
+/***/ }),
+&nbsp;
+/***/ "./src/context/index.tsx":
+/*!*******************************!*\
+  !*** ./src/context/index.tsx ***!
+  \*******************************/
+/***/ (<span class="fstat-no" title="function not covered" >(m</span>odule, __webpack_exports__, __webpack_require__) =&gt; {
+&nbsp;
+"use strict";
+<span class="cstat-no" title="statement not covered" >eval("__webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) =&gt; { try {\n__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () =&gt; (__WEBPACK_DEFAULT_EXPORT__),\n/* harmony export */   \"useAppContext\": () =&gt; (/* binding */ useAppContext)\n/* harmony export */ });\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ \"react/jsx-dev-runtime\");\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ \"react\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/router */ \"next/router\");\n/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _hooks_useAuthenticated__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @/hooks/useAuthenticated */ \"./src/hooks/useAuthenticated.ts\");\nvar __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_hooks_useAuthenticated__WEBPACK_IMPORTED_MODULE_3__]);\n_hooks_useAuthenticated__WEBPACK_IMPORTED_MODULE_3__ = (__webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__)[0];\n\n\n\n\nconst AppContext = /*#__PURE__*/ (0,react__WEBPACK_IMPORTED_MODULE_1__.createContext)(null);\nconst AppWrapperContext = ({ children  })=&gt;{\n    const router = (0,next_router__WEBPACK_IMPORTED_MODULE_2__.useRouter)();\n    const { query  } = router;\n    const { edit: editQuery  } = query;\n    const isEditMode = editQuery === \"true\";\n    const onEditRoute = ()=&gt;{\n        router.replace(\"?edit=true\"); //TODO handle query better https://github.com/Real-Dev-Squad/website-status/issues/299 \n    };\n    const { isLoggedIn , isLoading  } = (0,_hooks_useAuthenticated__WEBPACK_IMPORTED_MODULE_3__[\"default\"])();\n    return /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(AppContext.Provider, {\n        value: {\n            state: {\n                isEditMode,\n                isLoggedIn,\n                isLoading\n            },\n            actions: {\n                onEditRoute\n            }\n        },\n        children: children\n    }, void 0, false, {\n        fileName: \"C:\\\\Users\\\\ShreeRam\\\\Documents\\\\GitHub\\\\website-status\\\\src\\\\context\\\\index.tsx\",\n        lineNumber: 25,\n        columnNumber: 9\n    }, undefined);\n};\nconst useAppContext = ()=&gt;{\n    const context = (0,react__WEBPACK_IMPORTED_MODULE_1__.useContext)(AppContext);\n    if (context === undefined) {\n        throw new Error(\"useAppContext must be used within a CountProvider\");\n    }\n    return context || {};\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (AppWrapperContext);\n\n__webpack_async_result__();\n} catch(e) { __webpack_async_result__(e); } });//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMvY29udGV4dC9pbmRleC50c3guanMiLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7O0FBQUE7QUFBMEU7QUFDbEM7QUFDZ0I7QUFVeEQsTUFBTUksMkJBQWFKLG9EQUFhQSxDQUFxQixJQUFJO0FBRXpELE1BQU1LLG9CQUErQixDQUFDLEVBQUVDLFNBQVEsRUFBRSxHQUFLO0lBQ25ELE1BQU1DLFNBQVNMLHNEQUFTQTtJQUN4QixNQUFNLEVBQUVNLE1BQUssRUFBRSxHQUFHRDtJQUNsQixNQUFNLEVBQUVFLE1BQU1DLFVBQVMsRUFBRSxHQUFHRjtJQUM1QixNQUFNRyxhQUFhRCxjQUFjO0lBQ2pDLE1BQU1FLGNBQWMsSUFBTTtRQUN0QkwsT0FBT00sT0FBTyxDQUFDLGVBQWUsdUZBQXVGO0lBQ3pIO0lBQ0EsTUFBTSxFQUFFQyxXQUFVLEVBQUVDLFVBQVMsRUFBRSxHQUFHWixtRUFBZ0JBO0lBQ2xELHFCQUNJLDhEQUFDQyxXQUFXWSxRQUFRO1FBQUNDLE9BQU87WUFDeEJDLE9BQU87Z0JBQ0hQO2dCQUNBRztnQkFDQUM7WUFDSjtZQUNBSSxTQUFTO2dCQUNMUDtZQUNKO1FBQ0o7a0JBQ0tOOzs7Ozs7QUFHYjtBQUVPLE1BQU1jLGdCQUFnQixJQUFNO0lBQy9CLE1BQU1DLFVBQVVwQixpREFBVUEsQ0FBQ0c7SUFDM0IsSUFBSWlCLFlBQVVDLFdBQVc7UUFDckIsTUFBTSxJQUFJQyxNQUFNLHFEQUFvRDtJQUN4RSxDQUFDO0lBQ0QsT0FBT0YsV0FBVyxDQUFDO0FBQ3ZCLEVBQUM7QUFDRCxpRUFBZWhCLGlCQUFpQkEsRUFBQSIsInNvdXJjZXMiOlsid2VicGFjazovL3N0YXR1cy8uL3NyYy9jb250ZXh0L2luZGV4LnRzeD9hYjFjIl0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IGNyZWF0ZUNvbnRleHQsIFJlYWN0Tm9kZSwgdXNlQ29udGV4dCwgRkMsIHVzZVN0YXRlIH0gZnJvbSAncmVhY3QnXHJcbmltcG9ydCB7IHVzZVJvdXRlciB9IGZyb20gJ25leHQvcm91dGVyJztcclxuaW1wb3J0IHVzZUF1dGhlbnRpY2F0ZWQgZnJvbSAnQC9ob29rcy91c2VBdXRoZW50aWNhdGVkJztcclxuXHJcbmludGVyZmFjZSBQcm9wcyB7XHJcbiAgICBjaGlsZHJlbj86IFJlYWN0Tm9kZTtcclxufVxyXG5cclxuZXhwb3J0IHR5cGUgQ29udGV4dFR5cGUgPSB7XHJcbiAgICBzdGF0ZTogeyBpc0VkaXRNb2RlOiBib29sZWFuLCBpc0xvZ2dlZEluOiBib29sZWFuLCBpc0xvYWRpbmc6IGJvb2xlYW4gfTtcclxuICAgIGFjdGlvbnM6IHsgb25FZGl0Um91dGU6ICgpID0+IHZvaWQgfVxyXG59XHJcbmNvbnN0IEFwcENvbnRleHQgPSBjcmVhdGVDb250ZXh0PENvbnRleHRUeXBlIHwgbnVsbD4obnVsbClcclxuXHJcbmNvbnN0IEFwcFdyYXBwZXJDb250ZXh0OiBGQzxQcm9wcz4gPSAoeyBjaGlsZHJlbiB9KSA9PiB7XHJcbiAgICBjb25zdCByb3V0ZXIgPSB1c2VSb3V0ZXIoKVxyXG4gICAgY29uc3QgeyBxdWVyeSB9ID0gcm91dGVyO1xyXG4gICAgY29uc3QgeyBlZGl0OiBlZGl0UXVlcnkgfSA9IHF1ZXJ5O1xyXG4gICAgY29uc3QgaXNFZGl0TW9kZSA9IGVkaXRRdWVyeSA9PT0gJ3RydWUnO1xyXG4gICAgY29uc3Qgb25FZGl0Um91dGUgPSAoKSA9PiB7XHJcbiAgICAgICAgcm91dGVyLnJlcGxhY2UoJz9lZGl0PXRydWUnKTsgLy9UT0RPIGhhbmRsZSBxdWVyeSBiZXR0ZXIgaHR0cHM6Ly9naXRodWIuY29tL1JlYWwtRGV2LVNxdWFkL3dlYnNpdGUtc3RhdHVzL2lzc3Vlcy8yOTkgXHJcbiAgICB9XHJcbiAgICBjb25zdCB7IGlzTG9nZ2VkSW4sIGlzTG9hZGluZyB9ID0gdXNlQXV0aGVudGljYXRlZCgpO1xyXG4gICAgcmV0dXJuIChcclxuICAgICAgICA8QXBwQ29udGV4dC5Qcm92aWRlciB2YWx1ZT17e1xyXG4gICAgICAgICAgICBzdGF0ZToge1xyXG4gICAgICAgICAgICAgICAgaXNFZGl0TW9kZSxcclxuICAgICAgICAgICAgICAgIGlzTG9nZ2VkSW4sXHJcbiAgICAgICAgICAgICAgICBpc0xvYWRpbmdcclxuICAgICAgICAgICAgfSxcclxuICAgICAgICAgICAgYWN0aW9uczoge1xyXG4gICAgICAgICAgICAgICAgb25FZGl0Um91dGVcclxuICAgICAgICAgICAgfVxyXG4gICAgICAgIH19PlxyXG4gICAgICAgICAgICB7Y2hpbGRyZW59XHJcbiAgICAgICAgPC9BcHBDb250ZXh0LlByb3ZpZGVyPlxyXG4gICAgKVxyXG59XHJcblxyXG5leHBvcnQgY29uc3QgdXNlQXBwQ29udGV4dCA9ICgpID0+IHtcclxuICAgIGNvbnN0IGNvbnRleHQgPSB1c2VDb250ZXh0KEFwcENvbnRleHQpIGFzIENvbnRleHRUeXBlXHJcbiAgICBpZiAoY29udGV4dD09PXVuZGVmaW5lZCkge1xyXG4gICAgICAgIHRocm93IG5ldyBFcnJvcigndXNlQXBwQ29udGV4dCBtdXN0IGJlIHVzZWQgd2l0aGluIGEgQ291bnRQcm92aWRlcicpXHJcbiAgICB9XHJcbiAgICByZXR1cm4gY29udGV4dCB8fCB7fVxyXG59XHJcbmV4cG9ydCBkZWZhdWx0IEFwcFdyYXBwZXJDb250ZXh0XHJcbiJdLCJuYW1lcyI6WyJjcmVhdGVDb250ZXh0IiwidXNlQ29udGV4dCIsInVzZVJvdXRlciIsInVzZUF1dGhlbnRpY2F0ZWQiLCJBcHBDb250ZXh0IiwiQXBwV3JhcHBlckNvbnRleHQiLCJjaGlsZHJlbiIsInJvdXRlciIsInF1ZXJ5IiwiZWRpdCIsImVkaXRRdWVyeSIsImlzRWRpdE1vZGUiLCJvbkVkaXRSb3V0ZSIsInJlcGxhY2UiLCJpc0xvZ2dlZEluIiwiaXNMb2FkaW5nIiwiUHJvdmlkZXIiLCJ2YWx1ZSIsInN0YXRlIiwiYWN0aW9ucyIsInVzZUFwcENvbnRleHQiLCJjb250ZXh0IiwidW5kZWZpbmVkIiwiRXJyb3IiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./src/context/index.tsx\n");</span>
+&nbsp;
+/***/ }),
+&nbsp;
+/***/ "./src/context/isUserAuthorized.tsx":
+/*!******************************************!*\
+  !*** ./src/context/isUserAuthorized.tsx ***!
+  \******************************************/
+/***/ (<span class="fstat-no" title="function not covered" >(m</span>odule, __webpack_exports__, __webpack_require__) =&gt; {
+&nbsp;
+"use strict";
+<span class="cstat-no" title="statement not covered" >eval("__webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) =&gt; { try {\n__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () =&gt; (__WEBPACK_DEFAULT_EXPORT__),\n/* harmony export */   \"isUserAuthorizedContext\": () =&gt; (/* binding */ isUserAuthorizedContext)\n/* harmony export */ });\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ \"react/jsx-dev-runtime\");\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ \"react\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _helperFunctions_fetch__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @/helperFunctions/fetch */ \"./src/helperFunctions/fetch.ts\");\n/* harmony import */ var _helperFunctions_toast__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @/helperFunctions/toast */ \"./src/helperFunctions/toast.ts\");\n/* harmony import */ var _components_constants_url__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @/components/constants/url */ \"./src/components/constants/url.ts\");\nvar __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_helperFunctions_fetch__WEBPACK_IMPORTED_MODULE_2__, _helperFunctions_toast__WEBPACK_IMPORTED_MODULE_3__]);\n([_helperFunctions_fetch__WEBPACK_IMPORTED_MODULE_2__, _helperFunctions_toast__WEBPACK_IMPORTED_MODULE_3__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);\n\n\n\n\n\nconst { ERROR  } = _helperFunctions_toast__WEBPACK_IMPORTED_MODULE_3__.ToastTypes;\nconst isUserAuthorizedContext = /*#__PURE__*/ (0,react__WEBPACK_IMPORTED_MODULE_1__.createContext)(false);\nconst IsUserAuthorizedContext = ({ children  })=&gt;{\n    const [isUserAuthorized, setIsUserAuthorized] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(false);\n    (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(()=&gt;{\n        const fetchData = async ()=&gt;{\n            try {\n                const { requestPromise  } = (0,_helperFunctions_fetch__WEBPACK_IMPORTED_MODULE_2__[\"default\"])({\n                    url: _components_constants_url__WEBPACK_IMPORTED_MODULE_4__.USER_SELF\n                });\n                const { data  } = await requestPromise;\n                const userRoles = {\n                    adminUser: data.roles?.admin,\n                    superUser: data.roles?.super_user\n                };\n                const { adminUser , superUser  } = userRoles;\n                setIsUserAuthorized(!!adminUser || !!superUser);\n            } catch (err) {\n                (0,_helperFunctions_toast__WEBPACK_IMPORTED_MODULE_3__.toast)(ERROR, err.message);\n            }\n        };\n        fetchData();\n        return ()=&gt;{\n            setIsUserAuthorized(false);\n        };\n    }, []);\n    return /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(isUserAuthorizedContext.Provider, {\n        value: isUserAuthorized,\n        children: children\n    }, void 0, false, {\n        fileName: \"C:\\\\Users\\\\ShreeRam\\\\Documents\\\\GitHub\\\\website-status\\\\src\\\\context\\\\isUserAuthorized.tsx\",\n        lineNumber: 37,\n        columnNumber: 5\n    }, undefined);\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (IsUserAuthorizedContext);\n\n__webpack_async_result__();\n} catch(e) { __webpack_async_result__(e); } });//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMvY29udGV4dC9pc1VzZXJBdXRob3JpemVkLnRzeC5qcyIsIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7QUFBQTtBQUFvRjtBQUN4QztBQUNnQjtBQUNMO0FBRXZELE1BQU0sRUFBRU8sTUFBSyxFQUFFLEdBQUdGLDhEQUFVQTtBQUNyQixNQUFNRyx3Q0FBMEJOLG9EQUFhQSxDQUFVLEtBQUssRUFBRTtBQU1yRSxNQUFNTywwQkFBcUMsQ0FBQyxFQUFFQyxTQUFRLEVBQUUsR0FBSztJQUMzRCxNQUFNLENBQUNDLGtCQUFrQkMsb0JBQW9CLEdBQUdYLCtDQUFRQSxDQUFVLEtBQUs7SUFDdkVELGdEQUFTQSxDQUFDLElBQU07UUFDZCxNQUFNYSxZQUFZLFVBQVk7WUFDNUIsSUFBSTtnQkFDRixNQUFNLEVBQUVDLGVBQWMsRUFBRSxHQUFHWCxrRUFBS0EsQ0FBQztvQkFBRVksS0FBS1QsZ0VBQVNBO2dCQUFDO2dCQUNsRCxNQUFNLEVBQUVVLEtBQUksRUFBRSxHQUFHLE1BQU1GO2dCQUN2QixNQUFNRyxZQUFZO29CQUNoQkMsV0FBV0YsS0FBS0csS0FBSyxFQUFFQztvQkFDdkJDLFdBQVdMLEtBQUtHLEtBQUssRUFBRUc7Z0JBQ3pCO2dCQUNBLE1BQU0sRUFBRUosVUFBUyxFQUFFRyxVQUFTLEVBQUUsR0FBR0o7Z0JBQ2pDTCxvQkFBb0IsQ0FBQyxDQUFDTSxhQUFhLENBQUMsQ0FBQ0c7WUFDdkMsRUFBRSxPQUFPRSxLQUFVO2dCQUNqQm5CLDZEQUFLQSxDQUFDRyxPQUFPZ0IsSUFBSUMsT0FBTztZQUMxQjtRQUNGO1FBQ0FYO1FBRUEsT0FBUSxJQUFNO1lBQ1pELG9CQUFvQixLQUFLO1FBQzNCO0lBQ0YsR0FBRyxFQUFFO0lBQ0wscUJBQ0UsOERBQUNKLHdCQUF3QmlCLFFBQVE7UUFBQ0MsT0FBT2Y7a0JBQ3RDRDs7Ozs7O0FBR1A7QUFFQSxpRUFBZUQsdUJBQXVCQSxFQUFBIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vc3RhdHVzLy4vc3JjL2NvbnRleHQvaXNVc2VyQXV0aG9yaXplZC50c3g/N2Q1MCJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyB1c2VFZmZlY3QsIHVzZVN0YXRlLCBjcmVhdGVDb250ZXh0LCBGQywgQ2hpbGRyZW4sIFJlYWN0Tm9kZSB9IGZyb20gXCJyZWFjdFwiO1xyXG5pbXBvcnQgZmV0Y2ggZnJvbSAnQC9oZWxwZXJGdW5jdGlvbnMvZmV0Y2gnO1xyXG5pbXBvcnQgeyB0b2FzdCwgVG9hc3RUeXBlcyB9IGZyb20gJ0AvaGVscGVyRnVuY3Rpb25zL3RvYXN0JztcclxuaW1wb3J0IHsgVVNFUl9TRUxGIH0gZnJvbSAnQC9jb21wb25lbnRzL2NvbnN0YW50cy91cmwnO1xyXG5cclxuY29uc3QgeyBFUlJPUiB9ID0gVG9hc3RUeXBlcztcclxuZXhwb3J0IGNvbnN0IGlzVXNlckF1dGhvcml6ZWRDb250ZXh0ID0gY3JlYXRlQ29udGV4dDxCb29sZWFuPihmYWxzZSk7XHJcblxyXG5pbnRlcmZhY2UgUHJvcHMge1xyXG4gIGNoaWxkcmVuOiBSZWFjdE5vZGU7XHJcbn1cclxuXHJcbmNvbnN0IElzVXNlckF1dGhvcml6ZWRDb250ZXh0OiBGQzxQcm9wcz4gPSAoeyBjaGlsZHJlbiB9KSA9PiB7XHJcbiAgY29uc3QgW2lzVXNlckF1dGhvcml6ZWQsIHNldElzVXNlckF1dGhvcml6ZWRdID0gdXNlU3RhdGU8Qm9vbGVhbj4oZmFsc2UpO1xyXG4gIHVzZUVmZmVjdCgoKSA9PiB7XHJcbiAgICBjb25zdCBmZXRjaERhdGEgPSBhc3luYyAoKSA9PiB7XHJcbiAgICAgIHRyeSB7XHJcbiAgICAgICAgY29uc3QgeyByZXF1ZXN0UHJvbWlzZSB9ID0gZmV0Y2goeyB1cmw6IFVTRVJfU0VMRiB9KTtcclxuICAgICAgICBjb25zdCB7IGRhdGEgfSA9IGF3YWl0IHJlcXVlc3RQcm9taXNlO1xyXG4gICAgICAgIGNvbnN0IHVzZXJSb2xlcyA9IHtcclxuICAgICAgICAgIGFkbWluVXNlcjogZGF0YS5yb2xlcz8uYWRtaW4sXHJcbiAgICAgICAgICBzdXBlclVzZXI6IGRhdGEucm9sZXM/LnN1cGVyX3VzZXIsXHJcbiAgICAgICAgfTtcclxuICAgICAgICBjb25zdCB7IGFkbWluVXNlciwgc3VwZXJVc2VyIH0gPSB1c2VyUm9sZXM7XHJcbiAgICAgICAgc2V0SXNVc2VyQXV0aG9yaXplZCghIWFkbWluVXNlciB8fCAhIXN1cGVyVXNlcik7XHJcbiAgICAgIH0gY2F0Y2ggKGVycjogYW55KSB7XHJcbiAgICAgICAgdG9hc3QoRVJST1IsIGVyci5tZXNzYWdlKTtcclxuICAgICAgfVxyXG4gICAgfTtcclxuICAgIGZldGNoRGF0YSgpO1xyXG5cclxuICAgIHJldHVybiAoKCkgPT4ge1xyXG4gICAgICBzZXRJc1VzZXJBdXRob3JpemVkKGZhbHNlKTtcclxuICAgIH0pO1xyXG4gIH0sIFtdKTtcclxuICByZXR1cm4oXHJcbiAgICA8aXNVc2VyQXV0aG9yaXplZENvbnRleHQuUHJvdmlkZXIgdmFsdWU9e2lzVXNlckF1dGhvcml6ZWR9PlxyXG4gICAgICB7Y2hpbGRyZW59XHJcbiAgICA8L2lzVXNlckF1dGhvcml6ZWRDb250ZXh0LlByb3ZpZGVyPlxyXG4gIClcclxufVxyXG5cclxuZXhwb3J0IGRlZmF1bHQgSXNVc2VyQXV0aG9yaXplZENvbnRleHQiXSwibmFtZXMiOlsidXNlRWZmZWN0IiwidXNlU3RhdGUiLCJjcmVhdGVDb250ZXh0IiwiZmV0Y2giLCJ0b2FzdCIsIlRvYXN0VHlwZXMiLCJVU0VSX1NFTEYiLCJFUlJPUiIsImlzVXNlckF1dGhvcml6ZWRDb250ZXh0IiwiSXNVc2VyQXV0aG9yaXplZENvbnRleHQiLCJjaGlsZHJlbiIsImlzVXNlckF1dGhvcml6ZWQiLCJzZXRJc1VzZXJBdXRob3JpemVkIiwiZmV0Y2hEYXRhIiwicmVxdWVzdFByb21pc2UiLCJ1cmwiLCJkYXRhIiwidXNlclJvbGVzIiwiYWRtaW5Vc2VyIiwicm9sZXMiLCJhZG1pbiIsInN1cGVyVXNlciIsInN1cGVyX3VzZXIiLCJlcnIiLCJtZXNzYWdlIiwiUHJvdmlkZXIiLCJ2YWx1ZSJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./src/context/isUserAuthorized.tsx\n");</span>
+&nbsp;
+/***/ }),
+&nbsp;
+/***/ "./src/helperFunctions/fetch.ts":
+/*!**************************************!*\
+  !*** ./src/helperFunctions/fetch.ts ***!
+  \**************************************/
+/***/ (<span class="fstat-no" title="function not covered" >(m</span>odule, __webpack_exports__, __webpack_require__) =&gt; {
+&nbsp;
+"use strict";
+<span class="cstat-no" title="statement not covered" >eval("__webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) =&gt; { try {\n__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () =&gt; (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ \"axios\");\nvar __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([axios__WEBPACK_IMPORTED_MODULE_0__]);\naxios__WEBPACK_IMPORTED_MODULE_0__ = (__webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__)[0];\n\n/**\r\n * Used for network calls\r\n * @param url {String} - API Endpoint URL\r\n * @param method {String} - API Call Method (GET, POST etc.)\r\n * @param params {Object} - Query Params for the API call\r\n * @param data {Object} - Body to be sent\r\n * @param headers {Object} - Headers to be sent\r\n * @param options {Object} - Options to be sent via axios\r\n */ const fetch = ({ url , method =\"get\" , params =null , data =null , headers =null , options ={}  })=&gt;{\n    const { CancelToken  } = axios__WEBPACK_IMPORTED_MODULE_0__[\"default\"];\n    const source = CancelToken.source();\n    const requestPromise = (0,axios__WEBPACK_IMPORTED_MODULE_0__[\"default\"])({\n        method,\n        url,\n        params,\n        data,\n        headers: {\n            \"Content-type\": \"application/json\",\n            ...headers\n        },\n        withCredentials: true,\n        cancelToken: source.token,\n        ...options\n    });\n    return {\n        requestPromise,\n        cancelApi: source.cancel\n    };\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (fetch);\n\n__webpack_async_result__();\n} catch(e) { __webpack_async_result__(e); } });//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMvaGVscGVyRnVuY3Rpb25zL2ZldGNoLnRzLmpzIiwibWFwcGluZ3MiOiI7Ozs7Ozs7O0FBQTBCO0FBVzFCO0lBa0JFLE1BQU0sRUFBRVEsWUFBVyxFQUFFO0lBQ3JCLE1BQU1DLFNBQVNELFlBQVlDLE1BQU07SUFDakMsTUFBTUMsaUJBQWlCVixNQUFNO1FBQzNCRztRQUNBRDtRQUNBRTtRQUNBQztRQUNBQyxTQUFTO1lBQ1AsZ0JBQWdCO1lBQ2hCLEdBQUdBLE9BQU87UUFDWjtRQUNBSztRQUNBQztRQUNBLEdBQUdMO0lBQ0w7SUFDQSxPQUFPO1FBQ0xHO1FBQ0FJLFdBQVdMO0lBQ2I7QUFDRjtBQUVBLGVBQWVSLE1BQU0iLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9zdGF0dXMvLi9zcmMvaGVscGVyRnVuY3Rpb25zL2ZldGNoLnRzPzNlNjUiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IGF4aW9zIGZyb20gJ2F4aW9zJztcclxuXHJcbnR5cGUgZmV0Y2hQYXJhbXMgPSB7XHJcbiAgdXJsOiBzdHJpbmc7XHJcbiAgbWV0aG9kPzogJ2dldCcgfCAncGF0Y2gnIHwgJ3Bvc3QnIHwgJ2RlbGV0ZSc7XHJcbiAgcGFyYW1zPzogYW55IHwgbnVsbDtcclxuICBkYXRhPzogbnVsbCB8IGFueTtcclxuICBoZWFkZXJzPzogbnVsbCB8IG9iamVjdDtcclxuICBvcHRpb25zPzogb2JqZWN0IHwgbnVsbDtcclxufTtcclxuXHJcbi8qKlxyXG4gKiBVc2VkIGZvciBuZXR3b3JrIGNhbGxzXHJcbiAqIEBwYXJhbSB1cmwge1N0cmluZ30gLSBBUEkgRW5kcG9pbnQgVVJMXHJcbiAqIEBwYXJhbSBtZXRob2Qge1N0cmluZ30gLSBBUEkgQ2FsbCBNZXRob2QgKEdFVCwgUE9TVCBldGMuKVxyXG4gKiBAcGFyYW0gcGFyYW1zIHtPYmplY3R9IC0gUXVlcnkgUGFyYW1zIGZvciB0aGUgQVBJIGNhbGxcclxuICogQHBhcmFtIGRhdGEge09iamVjdH0gLSBCb2R5IHRvIGJlIHNlbnRcclxuICogQHBhcmFtIGhlYWRlcnMge09iamVjdH0gLSBIZWFkZXJzIHRvIGJlIHNlbnRcclxuICogQHBhcmFtIG9wdGlvbnMge09iamVjdH0gLSBPcHRpb25zIHRvIGJlIHNlbnQgdmlhIGF4aW9zXHJcbiAqL1xyXG5cclxuY29uc3QgZmV0Y2ggPSAoe1xyXG4gIHVybCxcclxuICBtZXRob2QgPSAnZ2V0JyxcclxuICBwYXJhbXMgPSBudWxsLFxyXG4gIGRhdGEgPSBudWxsLFxyXG4gIGhlYWRlcnMgPSBudWxsLFxyXG4gIG9wdGlvbnMgPSB7fSxcclxufTogZmV0Y2hQYXJhbXMpOnsgcmVxdWVzdFByb21pc2U6IFByb21pc2U8YW55PiwgY2FuY2VsQXBpOiAoKSA9PiB2b2lkIH0gPT4ge1xyXG4gIGNvbnN0IHsgQ2FuY2VsVG9rZW4gfSA9IGF4aW9zO1xyXG4gIGNvbnN0IHNvdXJjZSA9IENhbmNlbFRva2VuLnNvdXJjZSgpO1xyXG4gIGNvbnN0IHJlcXVlc3RQcm9taXNlID0gYXhpb3Moe1xyXG4gICAgbWV0aG9kLFxyXG4gICAgdXJsLFxyXG4gICAgcGFyYW1zLFxyXG4gICAgZGF0YSxcclxuICAgIGhlYWRlcnM6IHtcclxuICAgICAgJ0NvbnRlbnQtdHlwZSc6ICdhcHBsaWNhdGlvbi9qc29uJyxcclxuICAgICAgLi4uaGVhZGVycyxcclxuICAgIH0sXHJcbiAgICB3aXRoQ3JlZGVudGlhbHM6IHRydWUsXHJcbiAgICBjYW5jZWxUb2tlbjogc291cmNlLnRva2VuLFxyXG4gICAgLi4ub3B0aW9ucyxcclxuICB9KTtcclxuICByZXR1cm4ge1xyXG4gICAgcmVxdWVzdFByb21pc2UsXHJcbiAgICBjYW5jZWxBcGk6IHNvdXJjZS5jYW5jZWwsXHJcbiAgfTtcclxufTtcclxuXHJcbmV4cG9ydCBkZWZhdWx0IGZldGNoO1xyXG4iXSwibmFtZXMiOlsiYXhpb3MiLCJmZXRjaCIsInVybCIsIm1ldGhvZCIsInBhcmFtcyIsImRhdGEiLCJoZWFkZXJzIiwib3B0aW9ucyIsIkNhbmNlbFRva2VuIiwic291cmNlIiwicmVxdWVzdFByb21pc2UiLCJ3aXRoQ3JlZGVudGlhbHMiLCJjYW5jZWxUb2tlbiIsInRva2VuIiwiY2FuY2VsQXBpIiwiY2FuY2VsIl0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./src/helperFunctions/fetch.ts\n");</span>
+&nbsp;
+/***/ }),
+&nbsp;
+/***/ "./src/helperFunctions/toast.ts":
+/*!**************************************!*\
+  !*** ./src/helperFunctions/toast.ts ***!
+  \**************************************/
+/***/ (<span class="fstat-no" title="function not covered" >(m</span>odule, __webpack_exports__, __webpack_require__) =&gt; {
+&nbsp;
+"use strict";
+<span class="cstat-no" title="statement not covered" >eval("__webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) =&gt; { try {\n__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"ToastTypes\": () =&gt; (/* binding */ ToastTypes),\n/* harmony export */   \"toast\": () =&gt; (/* binding */ toast)\n/* harmony export */ });\n/* harmony import */ var react_toastify__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-toastify */ \"react-toastify\");\nvar __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([react_toastify__WEBPACK_IMPORTED_MODULE_0__]);\nreact_toastify__WEBPACK_IMPORTED_MODULE_0__ = (__webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__)[0];\n// toast is imported as toastify to avoid declaration conflicts with local toast function\n\nconst DELAY = 3000;\nvar ToastTypes;\n(function(ToastTypes) {\n    ToastTypes[\"INFO\"] = \"info\";\n    ToastTypes[\"SUCCESS\"] = \"success\";\n    ToastTypes[\"WARNING\"] = \"warning\";\n    ToastTypes[\"ERROR\"] = \"error\";\n})(ToastTypes || (ToastTypes = {}));\nconst toast = (type, message)=&gt;react_toastify__WEBPACK_IMPORTED_MODULE_0__.toast[type](message, {\n        position: react_toastify__WEBPACK_IMPORTED_MODULE_0__.toast.POSITION.TOP_RIGHT,\n        autoClose: DELAY,\n        pauseOnHover: false,\n        draggable: false\n    });\n\n\n__webpack_async_result__();\n} catch(e) { __webpack_async_result__(e); } });//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMvaGVscGVyRnVuY3Rpb25zL3RvYXN0LnRzLmpzIiwibWFwcGluZ3MiOiI7Ozs7Ozs7OztBQUFBLHlGQUF5RjtBQUV0QztBQUVuRCxNQUFNRSxRQUFnQjtJQUN0QjtVQUFLQyxVQUFVO0lBQVZBLFdBQ0hDLFVBQU87SUFESkQsV0FFSEUsYUFBVTtJQUZQRixXQUdIRyxhQUFVO0lBSFBILFdBSUhJLFdBQVE7R0FKTEosZUFBQUE7QUFPTCxNQUFNSCxRQUFRLENBQUNRLE1BQWtCQyxVQUFvQlIsaURBQVEsQ0FBQ08sS0FBSyxDQUFDQyxTQUFTO1FBQzNFQyxVQUFVVCxvRUFBMkI7UUFDckNZLFdBQVdYO1FBQ1hZLGNBQWMsS0FBSztRQUNuQkMsV0FBVyxLQUFLO0lBQ2xCO0FBRTZCIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vc3RhdHVzLy4vc3JjL2hlbHBlckZ1bmN0aW9ucy90b2FzdC50cz9lMzRhIl0sInNvdXJjZXNDb250ZW50IjpbIi8vIHRvYXN0IGlzIGltcG9ydGVkIGFzIHRvYXN0aWZ5IHRvIGF2b2lkIGRlY2xhcmF0aW9uIGNvbmZsaWN0cyB3aXRoIGxvY2FsIHRvYXN0IGZ1bmN0aW9uXHJcblxyXG5pbXBvcnQgeyB0b2FzdCBhcyB0b2FzdGlmeSB9IGZyb20gJ3JlYWN0LXRvYXN0aWZ5JztcclxuXHJcbmNvbnN0IERFTEFZOiBudW1iZXIgPSAzMDAwO1xyXG5lbnVtIFRvYXN0VHlwZXMge1xyXG4gIElORk8gPSAnaW5mbycsXHJcbiAgU1VDQ0VTUyA9ICdzdWNjZXNzJyxcclxuICBXQVJOSU5HID0gJ3dhcm5pbmcnLFxyXG4gIEVSUk9SID0gJ2Vycm9yJ1xyXG59XHJcblxyXG5jb25zdCB0b2FzdCA9ICh0eXBlOiBUb2FzdFR5cGVzLCBtZXNzYWdlOiBzdHJpbmcpID0+IHRvYXN0aWZ5W3R5cGVdKG1lc3NhZ2UsIHtcclxuICBwb3NpdGlvbjogdG9hc3RpZnkuUE9TSVRJT04uVE9QX1JJR0hULFxyXG4gIGF1dG9DbG9zZTogREVMQVksXHJcbiAgcGF1c2VPbkhvdmVyOiBmYWxzZSxcclxuICBkcmFnZ2FibGU6IGZhbHNlLFxyXG59KTtcclxuXHJcbmV4cG9ydCB7IHRvYXN0LCBUb2FzdFR5cGVzIH07XHJcbiJdLCJuYW1lcyI6WyJ0b2FzdCIsInRvYXN0aWZ5IiwiREVMQVkiLCJUb2FzdFR5cGVzIiwiSU5GTyIsIlNVQ0NFU1MiLCJXQVJOSU5HIiwiRVJST1IiLCJ0eXBlIiwibWVzc2FnZSIsInBvc2l0aW9uIiwiUE9TSVRJT04iLCJUT1BfUklHSFQiLCJhdXRvQ2xvc2UiLCJwYXVzZU9uSG92ZXIiLCJkcmFnZ2FibGUiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./src/helperFunctions/toast.ts\n");</span>
+&nbsp;
+/***/ }),
+&nbsp;
+/***/ "./src/hooks/useAuthenticated.ts":
+/*!***************************************!*\
+  !*** ./src/hooks/useAuthenticated.ts ***!
+  \***************************************/
+/***/ (<span class="fstat-no" title="function not covered" >(m</span>odule, __webpack_exports__, __webpack_require__) =&gt; {
+&nbsp;
+"use strict";
+<span class="cstat-no" title="statement not covered" >eval("__webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) =&gt; { try {\n__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () =&gt; (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"react\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _components_constants_url__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @/components/constants/url */ \"./src/components/constants/url.ts\");\n/* harmony import */ var _helperFunctions_fetch__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @/helperFunctions/fetch */ \"./src/helperFunctions/fetch.ts\");\nvar __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_helperFunctions_fetch__WEBPACK_IMPORTED_MODULE_2__]);\n_helperFunctions_fetch__WEBPACK_IMPORTED_MODULE_2__ = (__webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__)[0];\n\n\n\nconst useAuthenticated = ()=&gt;{\n    const [isLoggedIn, setIsLoggedIn] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false);\n    const [userData, setUserData] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)({\n        userName: \"\",\n        firstName: \"\",\n        profilePicture: _components_constants_url__WEBPACK_IMPORTED_MODULE_1__.DEFAULT_AVATAR\n    });\n    const [isLoading, setIsLoading] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false);\n    (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(()=&gt;{\n        const fetchData = async ()=&gt;{\n            setIsLoading(true);\n            try {\n                const { requestPromise  } = (0,_helperFunctions_fetch__WEBPACK_IMPORTED_MODULE_2__[\"default\"])({\n                    url: _components_constants_url__WEBPACK_IMPORTED_MODULE_1__.USER_SELF\n                });\n                const { data  } = await requestPromise;\n                if (data.incompleteUserDetails) {\n                    window.open(`${_components_constants_url__WEBPACK_IMPORTED_MODULE_1__.SIGNUP_LINK}`, \"_blank\", \"noopener\");\n                }\n                setUserData({\n                    userName: data.username,\n                    firstName: data.first_name,\n                    profilePicture: data?.picture?.url\n                });\n                setIsLoggedIn(true);\n            } catch (err) {\n                console.error(err);\n            } finally{\n                setIsLoading(false);\n            }\n        };\n        fetchData();\n    }, []);\n    return {\n        userData,\n        isLoggedIn,\n        isLoading\n    };\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (useAuthenticated);\n\n__webpack_async_result__();\n} catch(e) { __webpack_async_result__(e); } });//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMvaG9va3MvdXNlQXV0aGVudGljYXRlZC50cy5qcyIsIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7OztBQUE0QztBQUtSO0FBQ1E7QUFjNUMsTUFBTU0sbUJBQW1CLElBQXVCO0lBQzlDLE1BQU0sQ0FBQ0MsWUFBWUMsY0FBYyxHQUFHUCwrQ0FBUUEsQ0FBVSxLQUFLO0lBQzNELE1BQU0sQ0FBQ1EsVUFBVUMsWUFBWSxHQUFHVCwrQ0FBUUEsQ0FBVztRQUNqRFUsVUFBVTtRQUNWQyxXQUFXO1FBQ1hDLGdCQUFnQlYscUVBQWNBO0lBQ2hDO0lBRUEsTUFBTSxDQUFDVyxXQUFXQyxhQUFhLEdBQUdkLCtDQUFRQSxDQUFDLEtBQUs7SUFFaERELGdEQUFTQSxDQUFDLElBQU07UUFDZCxNQUFNZ0IsWUFBWSxVQUFZO1lBQzVCRCxhQUFhLElBQUk7WUFDakIsSUFBSTtnQkFDRixNQUFNLEVBQUVFLGVBQWMsRUFBRSxHQUFHWixrRUFBS0EsQ0FBQztvQkFBRWEsS0FBS2hCLGdFQUFTQTtnQkFBQztnQkFDbEQsTUFBTSxFQUFFaUIsS0FBSSxFQUFFLEdBQUcsTUFBTUY7Z0JBQ3ZCLElBQUlFLEtBQUtDLHFCQUFxQixFQUFFO29CQUM5QkMsT0FBT0MsSUFBSSxDQUFDLENBQUMsRUFBRWxCLGtFQUFXQSxDQUFDLENBQUMsRUFBRSxVQUFVO2dCQUMxQyxDQUFDO2dCQUNETSxZQUFZO29CQUNWQyxVQUFVUSxLQUFLSSxRQUFRO29CQUN2QlgsV0FBV08sS0FBS0ssVUFBVTtvQkFDMUJYLGdCQUFnQk0sTUFBTU0sU0FBU1A7Z0JBQ2pDO2dCQUNBVixjQUFjLElBQUk7WUFDcEIsRUFBRSxPQUFPa0IsS0FBSztnQkFDWkMsUUFBUUMsS0FBSyxDQUFDRjtZQUNoQixTQUFVO2dCQUNSWCxhQUFhLEtBQUs7WUFDcEI7UUFDRjtRQUNBQztJQUNGLEdBQUcsRUFBRTtJQUNMLE9BQU87UUFBRVA7UUFBVUY7UUFBWU87SUFBVTtBQUMzQztBQUVBLGlFQUFlUixnQkFBZ0JBLEVBQUMiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9zdGF0dXMvLi9zcmMvaG9va3MvdXNlQXV0aGVudGljYXRlZC50cz84NDllIl0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IHVzZUVmZmVjdCwgdXNlU3RhdGUgfSBmcm9tICdyZWFjdCc7XHJcbmltcG9ydCB7XHJcbiAgVVNFUl9TRUxGLFxyXG4gIERFRkFVTFRfQVZBVEFSLFxyXG4gIFNJR05VUF9MSU5LLFxyXG59IGZyb20gJ0AvY29tcG9uZW50cy9jb25zdGFudHMvdXJsJztcclxuaW1wb3J0IGZldGNoIGZyb20gJ0AvaGVscGVyRnVuY3Rpb25zL2ZldGNoJztcclxuXHJcbnR5cGUgVXNlcmRhdGEgPSB7XHJcbiAgdXNlck5hbWU6IHN0cmluZztcclxuICBmaXJzdE5hbWU6IHN0cmluZztcclxuICBwcm9maWxlUGljdHVyZTogc3RyaW5nO1xyXG59O1xyXG5cclxudHlwZSBIb29rc1JldHVyblR5cGUgPSB7XHJcbiAgdXNlckRhdGE6IFVzZXJkYXRhO1xyXG4gIGlzTG9nZ2VkSW46IGJvb2xlYW47XHJcbiAgaXNMb2FkaW5nOiBib29sZWFuO1xyXG59O1xyXG5cclxuY29uc3QgdXNlQXV0aGVudGljYXRlZCA9ICgpOiBIb29rc1JldHVyblR5cGUgPT4ge1xyXG4gIGNvbnN0IFtpc0xvZ2dlZEluLCBzZXRJc0xvZ2dlZEluXSA9IHVzZVN0YXRlPGJvb2xlYW4+KGZhbHNlKTtcclxuICBjb25zdCBbdXNlckRhdGEsIHNldFVzZXJEYXRhXSA9IHVzZVN0YXRlPFVzZXJkYXRhPih7XHJcbiAgICB1c2VyTmFtZTogJycsXHJcbiAgICBmaXJzdE5hbWU6ICcnLFxyXG4gICAgcHJvZmlsZVBpY3R1cmU6IERFRkFVTFRfQVZBVEFSLFxyXG4gIH0pO1xyXG5cclxuICBjb25zdCBbaXNMb2FkaW5nLCBzZXRJc0xvYWRpbmddID0gdXNlU3RhdGUoZmFsc2UpO1xyXG5cclxuICB1c2VFZmZlY3QoKCkgPT4ge1xyXG4gICAgY29uc3QgZmV0Y2hEYXRhID0gYXN5bmMgKCkgPT4ge1xyXG4gICAgICBzZXRJc0xvYWRpbmcodHJ1ZSk7XHJcbiAgICAgIHRyeSB7XHJcbiAgICAgICAgY29uc3QgeyByZXF1ZXN0UHJvbWlzZSB9ID0gZmV0Y2goeyB1cmw6IFVTRVJfU0VMRiB9KTtcclxuICAgICAgICBjb25zdCB7IGRhdGEgfSA9IGF3YWl0IHJlcXVlc3RQcm9taXNlO1xyXG4gICAgICAgIGlmIChkYXRhLmluY29tcGxldGVVc2VyRGV0YWlscykge1xyXG4gICAgICAgICAgd2luZG93Lm9wZW4oYCR7U0lHTlVQX0xJTkt9YCwgJ19ibGFuaycsICdub29wZW5lcicpO1xyXG4gICAgICAgIH1cclxuICAgICAgICBzZXRVc2VyRGF0YSh7XHJcbiAgICAgICAgICB1c2VyTmFtZTogZGF0YS51c2VybmFtZSxcclxuICAgICAgICAgIGZpcnN0TmFtZTogZGF0YS5maXJzdF9uYW1lLFxyXG4gICAgICAgICAgcHJvZmlsZVBpY3R1cmU6IGRhdGE/LnBpY3R1cmU/LnVybCxcclxuICAgICAgICB9KTtcclxuICAgICAgICBzZXRJc0xvZ2dlZEluKHRydWUpO1xyXG4gICAgICB9IGNhdGNoIChlcnIpIHtcclxuICAgICAgICBjb25zb2xlLmVycm9yKGVycik7XHJcbiAgICAgIH0gZmluYWxseSB7XHJcbiAgICAgICAgc2V0SXNMb2FkaW5nKGZhbHNlKTtcclxuICAgICAgfVxyXG4gICAgfTtcclxuICAgIGZldGNoRGF0YSgpO1xyXG4gIH0sIFtdKTtcclxuICByZXR1cm4geyB1c2VyRGF0YSwgaXNMb2dnZWRJbiwgaXNMb2FkaW5nIH07XHJcbn07XHJcblxyXG5leHBvcnQgZGVmYXVsdCB1c2VBdXRoZW50aWNhdGVkO1xyXG4iXSwibmFtZXMiOlsidXNlRWZmZWN0IiwidXNlU3RhdGUiLCJVU0VSX1NFTEYiLCJERUZBVUxUX0FWQVRBUiIsIlNJR05VUF9MSU5LIiwiZmV0Y2giLCJ1c2VBdXRoZW50aWNhdGVkIiwiaXNMb2dnZWRJbiIsInNldElzTG9nZ2VkSW4iLCJ1c2VyRGF0YSIsInNldFVzZXJEYXRhIiwidXNlck5hbWUiLCJmaXJzdE5hbWUiLCJwcm9maWxlUGljdHVyZSIsImlzTG9hZGluZyIsInNldElzTG9hZGluZyIsImZldGNoRGF0YSIsInJlcXVlc3RQcm9taXNlIiwidXJsIiwiZGF0YSIsImluY29tcGxldGVVc2VyRGV0YWlscyIsIndpbmRvdyIsIm9wZW4iLCJ1c2VybmFtZSIsImZpcnN0X25hbWUiLCJwaWN0dXJlIiwiZXJyIiwiY29uc29sZSIsImVycm9yIl0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./src/hooks/useAuthenticated.ts\n");</span>
+&nbsp;
+/***/ }),
+&nbsp;
+/***/ "./src/pages/_app.tsx":
+/*!****************************!*\
+  !*** ./src/pages/_app.tsx ***!
+  \****************************/
+/***/ (<span class="fstat-no" title="function not covered" >(m</span>odule, __webpack_exports__, __webpack_require__) =&gt; {
+&nbsp;
+"use strict";
+<span class="cstat-no" title="statement not covered" >eval("__webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) =&gt; { try {\n__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () =&gt; (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ \"react/jsx-dev-runtime\");\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react_toastify__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-toastify */ \"react-toastify\");\n/* harmony import */ var _context__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @/context */ \"./src/context/index.tsx\");\n/* harmony import */ var _context_isUserAuthorized__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @/context/isUserAuthorized */ \"./src/context/isUserAuthorized.tsx\");\n/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-redux */ \"react-redux\");\n/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_redux__WEBPACK_IMPORTED_MODULE_4__);\n/* harmony import */ var _reduxjs_toolkit_dist_query_react__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @reduxjs/toolkit/dist/query/react */ \"@reduxjs/toolkit/dist/query/react\");\n/* harmony import */ var _reduxjs_toolkit_dist_query_react__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_reduxjs_toolkit_dist_query_react__WEBPACK_IMPORTED_MODULE_5__);\n/* harmony import */ var slices_apiSlice__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! slices/apiSlice */ \"./slices/apiSlice.ts\");\n/* harmony import */ var store__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! store */ \"./store.ts\");\n/* harmony import */ var react_toastify_dist_ReactToastify_css__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-toastify/dist/ReactToastify.css */ \"./node_modules/react-toastify/dist/ReactToastify.css\");\n/* harmony import */ var react_toastify_dist_ReactToastify_css__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(react_toastify_dist_ReactToastify_css__WEBPACK_IMPORTED_MODULE_8__);\n/* harmony import */ var _styles_index_scss__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @/styles/index.scss */ \"./src/styles/index.scss\");\n/* harmony import */ var _styles_index_scss__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_styles_index_scss__WEBPACK_IMPORTED_MODULE_9__);\nvar __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([react_toastify__WEBPACK_IMPORTED_MODULE_1__, _context__WEBPACK_IMPORTED_MODULE_2__, _context_isUserAuthorized__WEBPACK_IMPORTED_MODULE_3__]);\n([react_toastify__WEBPACK_IMPORTED_MODULE_1__, _context__WEBPACK_IMPORTED_MODULE_2__, _context_isUserAuthorized__WEBPACK_IMPORTED_MODULE_3__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);\n\n\n\n\n\n\n\n\n\n\nif (false) {}\nconst MyApp = ({ Component , pageProps  })=&gt;{\n    return /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(react_redux__WEBPACK_IMPORTED_MODULE_4__.Provider, {\n        store: store__WEBPACK_IMPORTED_MODULE_7__.store,\n        children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_reduxjs_toolkit_dist_query_react__WEBPACK_IMPORTED_MODULE_5__.ApiProvider, {\n            api: slices_apiSlice__WEBPACK_IMPORTED_MODULE_6__.statusApi,\n            children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_context__WEBPACK_IMPORTED_MODULE_2__[\"default\"], {\n                children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_context_isUserAuthorized__WEBPACK_IMPORTED_MODULE_3__[\"default\"], {\n                    children: [\n                        /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(react_toastify__WEBPACK_IMPORTED_MODULE_1__.ToastContainer, {}, void 0, false, {\n                            fileName: \"C:\\\\Users\\\\ShreeRam\\\\Documents\\\\GitHub\\\\website-status\\\\src\\\\pages\\\\_app.tsx\",\n                            lineNumber: 23,\n                            columnNumber: 13\n                        }, undefined),\n                        /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(Component, {\n                            ...pageProps\n                        }, void 0, false, {\n                            fileName: \"C:\\\\Users\\\\ShreeRam\\\\Documents\\\\GitHub\\\\website-status\\\\src\\\\pages\\\\_app.tsx\",\n                            lineNumber: 24,\n                            columnNumber: 13\n                        }, undefined)\n                    ]\n                }, void 0, true, {\n                    fileName: \"C:\\\\Users\\\\ShreeRam\\\\Documents\\\\GitHub\\\\website-status\\\\src\\\\pages\\\\_app.tsx\",\n                    lineNumber: 22,\n                    columnNumber: 11\n                }, undefined)\n            }, void 0, false, {\n                fileName: \"C:\\\\Users\\\\ShreeRam\\\\Documents\\\\GitHub\\\\website-status\\\\src\\\\pages\\\\_app.tsx\",\n                lineNumber: 21,\n                columnNumber: 9\n            }, undefined)\n        }, void 0, false, {\n            fileName: \"C:\\\\Users\\\\ShreeRam\\\\Documents\\\\GitHub\\\\website-status\\\\src\\\\pages\\\\_app.tsx\",\n            lineNumber: 20,\n            columnNumber: 7\n        }, undefined)\n    }, void 0, false, {\n        fileName: \"C:\\\\Users\\\\ShreeRam\\\\Documents\\\\GitHub\\\\website-status\\\\src\\\\pages\\\\_app.tsx\",\n        lineNumber: 19,\n        columnNumber: 5\n    }, undefined);\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (MyApp);\n\n__webpack_async_result__();\n} catch(e) { __webpack_async_result__(e); } });//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMvcGFnZXMvX2FwcC50c3guanMiLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQUFBO0FBRWdEO0FBQ047QUFDdUI7QUFDMUI7QUFDeUI7QUFDcEI7QUFDZDtBQUNpQjtBQUNsQjtBQUU3QixJQUFJTyxLQUF3QyxFQUFNLEVBRWpEO0FBRUQsTUFBTUksUUFBc0IsQ0FBQyxFQUFFQyxVQUFTLEVBQUVDLFVBQVMsRUFBRSxHQUFLO0lBQ3hELHFCQUNFLDhEQUFDVixpREFBUUE7UUFBQ0csT0FBT0Esd0NBQUtBO2tCQUNwQiw0RUFBQ0YsMEVBQVdBO1lBQUNVLEtBQUtULHNEQUFTQTtzQkFDekIsNEVBQUNKLGdEQUFpQkE7MEJBQ2hCLDRFQUFDQyxpRUFBdUJBOztzQ0FDdEIsOERBQUNGLDBEQUFjQTs7Ozs7c0NBQ2YsOERBQUNZOzRCQUFXLEdBQUdDLFNBQVM7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQU1wQztBQUdBLGlFQUFlRixLQUFLQSxFQUFDIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vc3RhdHVzLy4vc3JjL3BhZ2VzL19hcHAudHN4P2Y5ZDYiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgRkMgfSBmcm9tICdyZWFjdCc7XHJcbmltcG9ydCB0eXBlIHsgQXBwUHJvcHMgfSBmcm9tICduZXh0L2FwcCc7XHJcbmltcG9ydCB7IFRvYXN0Q29udGFpbmVyIH0gZnJvbSAncmVhY3QtdG9hc3RpZnknO1xyXG5pbXBvcnQgQXBwV3JhcHBlckNvbnRleHQgZnJvbSAnQC9jb250ZXh0JztcclxuaW1wb3J0IElzVXNlckF1dGhvcml6ZWRDb250ZXh0IGZyb20gJ0AvY29udGV4dC9pc1VzZXJBdXRob3JpemVkJztcclxuaW1wb3J0IHsgUHJvdmlkZXIgfSBmcm9tICdyZWFjdC1yZWR1eCc7XHJcbmltcG9ydCB7IEFwaVByb3ZpZGVyIH0gZnJvbSAnQHJlZHV4anMvdG9vbGtpdC9kaXN0L3F1ZXJ5L3JlYWN0JztcclxuaW1wb3J0IHsgc3RhdHVzQXBpIH0gZnJvbSAnc2xpY2VzL2FwaVNsaWNlJztcclxuaW1wb3J0IHsgc3RvcmUgfSBmcm9tICdzdG9yZSc7XHJcbmltcG9ydCAncmVhY3QtdG9hc3RpZnkvZGlzdC9SZWFjdFRvYXN0aWZ5LmNzcyc7XHJcbmltcG9ydCAnQC9zdHlsZXMvaW5kZXguc2Nzcyc7XHJcblxyXG5pZiAocHJvY2Vzcy5lbnYuTkVYVF9QVUJMSUNfQVBJX01PQ0tJTkcgPT09ICdPTicpIHtcclxuICByZXF1aXJlKCcuLi8uLi9fX21vY2tzX18vaW5kZXgnKTtcclxufVxyXG5cclxuY29uc3QgTXlBcHA6IEZDPEFwcFByb3BzPiA9ICh7IENvbXBvbmVudCwgcGFnZVByb3BzIH0pID0+IHtcclxuICByZXR1cm4gKFxyXG4gICAgPFByb3ZpZGVyIHN0b3JlPXtzdG9yZX0+XHJcbiAgICAgIDxBcGlQcm92aWRlciBhcGk9e3N0YXR1c0FwaX0+XHJcbiAgICAgICAgPEFwcFdyYXBwZXJDb250ZXh0PlxyXG4gICAgICAgICAgPElzVXNlckF1dGhvcml6ZWRDb250ZXh0PlxyXG4gICAgICAgICAgICA8VG9hc3RDb250YWluZXIgLz5cclxuICAgICAgICAgICAgPENvbXBvbmVudCB7Li4ucGFnZVByb3BzfSAvPlxyXG4gICAgICAgICAgPC9Jc1VzZXJBdXRob3JpemVkQ29udGV4dD5cclxuICAgICAgICA8L0FwcFdyYXBwZXJDb250ZXh0PlxyXG4gICAgICA8L0FwaVByb3ZpZGVyPlxyXG4gICAgPC9Qcm92aWRlcj5cclxuICApO1xyXG59XHJcblxyXG5cclxuZXhwb3J0IGRlZmF1bHQgTXlBcHA7XHJcbiJdLCJuYW1lcyI6WyJUb2FzdENvbnRhaW5lciIsIkFwcFdyYXBwZXJDb250ZXh0IiwiSXNVc2VyQXV0aG9yaXplZENvbnRleHQiLCJQcm92aWRlciIsIkFwaVByb3ZpZGVyIiwic3RhdHVzQXBpIiwic3RvcmUiLCJwcm9jZXNzIiwiZW52IiwiTkVYVF9QVUJMSUNfQVBJX01PQ0tJTkciLCJyZXF1aXJlIiwiTXlBcHAiLCJDb21wb25lbnQiLCJwYWdlUHJvcHMiLCJhcGkiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./src/pages/_app.tsx\n");</span>
+&nbsp;
+/***/ }),
+&nbsp;
+/***/ "./store.ts":
+/*!******************!*\
+  !*** ./store.ts ***!
+  \******************/
+/***/ (<span class="fstat-no" title="function not covered" >(_</span>_unused_webpack_module, __webpack_exports__, __webpack_require__) =&gt; {
+&nbsp;
+"use strict";
+<span class="cstat-no" title="statement not covered" >eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"store\": () =&gt; (/* binding */ store)\n/* harmony export */ });\n/* harmony import */ var _reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @reduxjs/toolkit */ \"@reduxjs/toolkit\");\n/* harmony import */ var _reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var slices_apiSlice__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! slices/apiSlice */ \"./slices/apiSlice.ts\");\n\n\nconst store = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__.configureStore)({\n    reducer: {\n        [slices_apiSlice__WEBPACK_IMPORTED_MODULE_1__.statusApi.reducerPath]: slices_apiSlice__WEBPACK_IMPORTED_MODULE_1__.statusApi.reducer\n    },\n    middleware: (getDefaultMiddleware)=&gt;getDefaultMiddleware().concat(slices_apiSlice__WEBPACK_IMPORTED_MODULE_1__.statusApi.middleware)\n});\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zdG9yZS50cy5qcyIsIm1hcHBpbmdzIjoiOzs7Ozs7O0FBQThFO0FBQ2xDO0FBQ3JDLE1BQU1FLFFBQVFGLGdFQUFjQSxDQUFDO0lBQ2xDRyxTQUFTO1FBQ1AsQ0FBQ0Ysa0VBQXFCLENBQUMsRUFBRUEsOERBQWlCO0lBQzVDO0lBQ0FJLFlBQVksQ0FBQ0MsdUJBQ1hBLHVCQUF1QkMsTUFBTSxDQUFDTixpRUFBb0I7QUFDdEQsR0FBRyIsInNvdXJjZXMiOlsid2VicGFjazovL3N0YXR1cy8uL3N0b3JlLnRzPzNiYzgiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgY29uZmlndXJlU3RvcmUsIGNyZWF0ZVNsaWNlLCBQYXlsb2FkQWN0aW9uIH0gZnJvbSAnQHJlZHV4anMvdG9vbGtpdCc7XHJcbmltcG9ydCB7IHN0YXR1c0FwaSB9IGZyb20gJ3NsaWNlcy9hcGlTbGljZSc7XHJcbmV4cG9ydCBjb25zdCBzdG9yZSA9IGNvbmZpZ3VyZVN0b3JlKHtcclxuICByZWR1Y2VyOiB7XHJcbiAgICBbc3RhdHVzQXBpLnJlZHVjZXJQYXRoXTogc3RhdHVzQXBpLnJlZHVjZXIsXHJcbiAgfSxcclxuICBtaWRkbGV3YXJlOiAoZ2V0RGVmYXVsdE1pZGRsZXdhcmUpID0+XHJcbiAgICBnZXREZWZhdWx0TWlkZGxld2FyZSgpLmNvbmNhdChzdGF0dXNBcGkubWlkZGxld2FyZSksXHJcbn0pO1xyXG4iXSwibmFtZXMiOlsiY29uZmlndXJlU3RvcmUiLCJzdGF0dXNBcGkiLCJzdG9yZSIsInJlZHVjZXIiLCJyZWR1Y2VyUGF0aCIsIm1pZGRsZXdhcmUiLCJnZXREZWZhdWx0TWlkZGxld2FyZSIsImNvbmNhdCJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./store.ts\n");</span>
+&nbsp;
+/***/ }),
+&nbsp;
+/***/ "./node_modules/react-toastify/dist/ReactToastify.css":
+/*!************************************************************!*\
+  !*** ./node_modules/react-toastify/dist/ReactToastify.css ***!
+  \************************************************************/
+/***/ (<span class="fstat-no" title="function not covered" >()</span> =&gt; {
+&nbsp;
+&nbsp;
+&nbsp;
+/***/ }),
+&nbsp;
+/***/ "./src/styles/index.scss":
+/*!*******************************!*\
+  !*** ./src/styles/index.scss ***!
+  \*******************************/
+/***/ (<span class="fstat-no" title="function not covered" >()</span> =&gt; {
+&nbsp;
+&nbsp;
+&nbsp;
+/***/ }),
+&nbsp;
+/***/ "@reduxjs/toolkit":
+/*!***********************************!*\
+  !*** external "@reduxjs/toolkit" ***!
+  \***********************************/
+/***/ (<span class="fstat-no" title="function not covered" >(m</span>odule) =&gt; {
+&nbsp;
+"use strict";
+<span class="cstat-no" title="statement not covered" >module.exports = require("@reduxjs/toolkit");</span>
+&nbsp;
+/***/ }),
+&nbsp;
+/***/ "@reduxjs/toolkit/dist/query/react":
+/*!****************************************************!*\
+  !*** external "@reduxjs/toolkit/dist/query/react" ***!
+  \****************************************************/
+/***/ (<span class="fstat-no" title="function not covered" >(m</span>odule) =&gt; {
+&nbsp;
+"use strict";
+<span class="cstat-no" title="statement not covered" >module.exports = require("@reduxjs/toolkit/dist/query/react");</span>
+&nbsp;
+/***/ }),
+&nbsp;
+/***/ "@reduxjs/toolkit/query/react":
+/*!***********************************************!*\
+  !*** external "@reduxjs/toolkit/query/react" ***!
+  \***********************************************/
+/***/ (<span class="fstat-no" title="function not covered" >(m</span>odule) =&gt; {
+&nbsp;
+"use strict";
+<span class="cstat-no" title="statement not covered" >module.exports = require("@reduxjs/toolkit/query/react");</span>
+&nbsp;
+/***/ }),
+&nbsp;
+/***/ "next-redux-wrapper":
+/*!*************************************!*\
+  !*** external "next-redux-wrapper" ***!
+  \*************************************/
+/***/ (<span class="fstat-no" title="function not covered" >(m</span>odule) =&gt; {
+&nbsp;
+"use strict";
+<span class="cstat-no" title="statement not covered" >module.exports = require("next-redux-wrapper");</span>
+&nbsp;
+/***/ }),
+&nbsp;
+/***/ "next/router":
+/*!******************************!*\
+  !*** external "next/router" ***!
+  \******************************/
+/***/ (<span class="fstat-no" title="function not covered" >(m</span>odule) =&gt; {
+&nbsp;
+"use strict";
+<span class="cstat-no" title="statement not covered" >module.exports = require("next/router");</span>
+&nbsp;
+/***/ }),
+&nbsp;
+/***/ "react":
+/*!************************!*\
+  !*** external "react" ***!
+  \************************/
+/***/ (<span class="fstat-no" title="function not covered" >(m</span>odule) =&gt; {
+&nbsp;
+"use strict";
+<span class="cstat-no" title="statement not covered" >module.exports = require("react");</span>
+&nbsp;
+/***/ }),
+&nbsp;
+/***/ "react-redux":
+/*!******************************!*\
+  !*** external "react-redux" ***!
+  \******************************/
+/***/ (<span class="fstat-no" title="function not covered" >(m</span>odule) =&gt; {
+&nbsp;
+"use strict";
+<span class="cstat-no" title="statement not covered" >module.exports = require("react-redux");</span>
+&nbsp;
+/***/ }),
+&nbsp;
+/***/ "react/jsx-dev-runtime":
+/*!****************************************!*\
+  !*** external "react/jsx-dev-runtime" ***!
+  \****************************************/
+/***/ (<span class="fstat-no" title="function not covered" >(m</span>odule) =&gt; {
+&nbsp;
+"use strict";
+<span class="cstat-no" title="statement not covered" >module.exports = require("react/jsx-dev-runtime");</span>
+&nbsp;
+/***/ }),
+&nbsp;
+/***/ "axios":
+/*!************************!*\
+  !*** external "axios" ***!
+  \************************/
+/***/ (<span class="fstat-no" title="function not covered" >(m</span>odule) =&gt; {
+&nbsp;
+"use strict";
+<span class="cstat-no" title="statement not covered" >module.exports = import("axios");;</span>
+&nbsp;
+/***/ }),
+&nbsp;
+/***/ "react-toastify":
+/*!*********************************!*\
+  !*** external "react-toastify" ***!
+  \*********************************/
+/***/ (<span class="fstat-no" title="function not covered" >(m</span>odule) =&gt; {
+&nbsp;
+"use strict";
+<span class="cstat-no" title="statement not covered" >module.exports = import("react-toastify");;</span>
+&nbsp;
+/***/ })
+&nbsp;
+};
+;
+&nbsp;
+// load runtime
+var __webpack_require__ = <span class="cstat-no" title="statement not covered" >require("../webpack-runtime.js");</span>
+<span class="cstat-no" title="statement not covered" >__webpack_require__.C(exports);</span>
+var __webpack_exec__ = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >(m</span>oduleId) =&gt; (<span class="cstat-no" title="statement not covered" >__webpack_require__(__webpack_require__.s = moduleId))</span></span>
+var __webpack_exports__ = (<span class="cstat-no" title="statement not covered" >__webpack_exec__("./src/pages/_app.tsx"))</span>;
+<span class="cstat-no" title="statement not covered" >module.exports = __webpack_exports__;</span>
+&nbsp;
+})();</pre></td></tr></table></pre>
+
+                <div class='push'></div><!-- for sticky footer -->
+            </div><!-- /wrapper -->
+            <div class='footer quiet pad2 space-top1 center small'>
+                Code coverage generated by
+                <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
+                at 2023-03-30T08:02:20.376Z
+            </div>
+        <script src="../../../../prettify.js"></script>
+        <script>
+            window.onload = function () {
+                prettyPrint();
+            };
+        </script>
+        <script src="../../../../sorter.js"></script>
+        <script src="../../../../block-navigation.js"></script>
+    </body>
+</html>
+    
